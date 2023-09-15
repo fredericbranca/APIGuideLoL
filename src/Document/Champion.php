@@ -21,70 +21,26 @@ class Champion
         return $this->id;
     }
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $type;
-
-    public function getType(): ?string
+    public function setId(string $id): self
     {
-        return $this->type;
+        $this->id = $id;
+        return $this;
     }
 
     /**
      * @MongoDB\Field(type="string")
      */
-    protected $format;
+    protected $idChamp;
 
-    public function getFormat(): ?string
+    public function getIdChamp(): ?string
     {
-        return $this->format;
+        return $this->idChamp;
     }
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $version;
-
-    public function getVersion(): ?string
+    public function setIdChamp(string $idChamp): self
     {
-        return $this->version;
-    }
-
-    /**
-     * @MongoDB\EmbedOne(targetDocument=ChampionData::class)
-     */
-    protected $data;
-
-    public function getData(): ?ChampionData
-    {
-        return $this->data;
-    }
-
-    // /**
-    //  * @MongoDB\EmbedOne(targetDocument=Keys::class)
-    //  */
-    // protected $keys;
-
-    // public function getKeys(): ?Keys
-    // {
-    //     return $this->keys;
-    // }
-}
-
-/** 
- * @MongoDB\EmbeddedDocument 
- */
-class ChampionData
-{
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $id;
-
-    public function getId(): ?string
-    {
-        return $this->id;
+        $this->idChamp = $idChamp;
+        return $this;
     }
 
     /**
@@ -97,6 +53,12 @@ class ChampionData
         return $this->key;
     }
 
+    public function setKey(string $key): self
+    {
+        $this->key = $key;
+        return $this;
+    }
+
     /**
      * @MongoDB\Field(type="string")
      */
@@ -105,6 +67,12 @@ class ChampionData
     public function getName(): ?string
     {
         return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -117,5 +85,137 @@ class ChampionData
         return $this->title;
     }
 
-    // getters and setters
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $image = [];
+
+    public function getImage(): array
+    {
+        return $this->image;
+    }
+
+    public function setImage(array $image): self
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $skins = [];
+
+    public function getSkins(): array
+    {
+        return $this->skins;
+    }
+
+    public function setSkins(array $skins): self
+    {
+        $this->skins = $skins;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $lore;
+
+    public function getLore(): ?string
+    {
+        return $this->lore;
+    }
+
+    public function setLore(string $lore): self
+    {
+        $this->lore = $lore;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $blurb;
+
+    public function getBlurb(): ?string
+    {
+        return $this->blurb;
+    }
+
+    public function setBlurb(string $blurb): self
+    {
+        $this->blurb = $blurb;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $tags = [];
+
+    public function getTags(): array
+    {
+        return $this->tags;
+    }
+
+    public function setTags(array $tags): self
+    {
+        $this->tags = $tags;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $partype;
+
+    public function getPartype(): ?string
+    {
+        return $this->partype;
+    }
+
+    public function setPartype(string $partype): self
+    {
+        $this->partype = $partype;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $spells = [];
+
+    public function getSpells(): array
+    {
+        return $this->spells;
+    }
+
+    public function setSpells(array $spells): self
+    {
+        $this->spells = $spells;
+        return $this;
+    }
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $passive = [];
+
+    public function getPassive(): array
+    {
+        return $this->passive;
+    }
+
+    public function setPassive(array $passive): self
+    {
+        $this->passive = $passive;
+        return $this;
+    }
 }
