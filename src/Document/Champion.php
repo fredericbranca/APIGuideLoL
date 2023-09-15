@@ -3,12 +3,25 @@
 namespace App\Document;
 
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\GraphQl\Query;
+use ApiPlatform\Metadata\GraphQl\QueryCollection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
  * @MongoDB\Document
  */
-#[ApiResource]
+#[ApiResource(
+    graphQlOperations: [
+        new Query(),
+        new QueryCollection()
+    ],
+    operations: [
+        new Get(),
+        new GetCollection()
+    ]
+)]
 class Champion
 {
     /**
