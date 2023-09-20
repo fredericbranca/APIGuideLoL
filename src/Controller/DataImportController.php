@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Document\Champion;
+use App\Document\Rune;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,8 +11,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DataImportController extends AbstractController
 {
+    // Route pour importer les champions dans la base de données
     #[Route('/import-champion', name: 'import_champion')]
-    public function importData(DocumentManager $dm)
+    public function importDataChampion(DocumentManager $dm)
     { {
             $json = file_get_contents('championFull.json');
             $data = json_decode($json, true);
@@ -58,5 +60,43 @@ class DataImportController extends AbstractController
 
             return new Response('Champions importés ou mise à jour avec succès !');
         }
+    }
+
+    // Route pour importer les runes
+    #[Route('/import-rune', name: 'import_rune')]
+    public function importData(DocumentManager $dm)
+    {
+        $json = file_get_contents('runesReforged.json');
+        $data = json_decode($json, true);
+
+        foreach ($data as $id => $runeData) {
+            // Recherche de la rune par son ID
+            $rune = $dm->getRepository(Rune::class)->findOneBy(['id' => $id]);
+
+            // Création de la rune si elle n'existe pas encore
+            if (!$rune) {
+                $rune = new Rune;
+                $rune->setId($runeData['key']);
+                $dm->persist($rune);
+            }
+
+            $rune->setIdRune($runeData['id']);
+            $rune->setKey($runeData['key']);
+            $rune->setIcon($runeData['icon']);
+            $rune->setName($runeData['name']);
+
+            $slots = $runeData['slots'];
+            if (isset($slots[0])) {
+                $primaryValue = $slots[0];
+                unset($slots[0]);
+                $slots = ['Primary' => $primaryValue] + $slots;
+            }
+
+            $rune->setSlots($slots);
+        }
+
+        $dm->flush();
+
+        return new Response('Runes importées ou mise à jour avec succès !');
     }
 }
