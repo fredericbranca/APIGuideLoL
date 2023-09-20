@@ -27,67 +27,67 @@ class Champion
     /**
      * @MongoDB\Id(strategy="NONE", type="string")
      */
-    protected $id;
+    private $id;
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $idChamp;
+    private $idChamp;
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $key;
+    private $key;
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $name;
+    private $name;
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $title;
+    private $title;
 
-        /**
+    /**
      * @MongoDB\Field(type="hash")
      */
     private array $image;
 
-        /**
+    /**
      * @MongoDB\Field(type="hash")
      */
-    protected $skins = [];
+    private $skins = [];
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $lore;
+    private $lore;
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $blurb;
+    private $blurb;
 
-        /**
+    /**
      * @MongoDB\Field(type="hash")
      */
-    protected $tags = [];
+    private $tags = [];
 
-        /**
+    /**
      * @MongoDB\Field(type="string")
      */
-    protected $partype;
+    private $partype;
     
     /**
      * @MongoDB\Field(type="hash")
      */
-    protected $spells = [];
+    private $spells = [];
 
-        /**
+    /**
      * @MongoDB\Field(type="hash")
      */
-    protected $passive = [];
+    private $passive = [];
 
     // GETTER & SETTER
 
