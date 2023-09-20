@@ -19,7 +19,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
     ],
     operations: [
         new Get(),
-        new GetCollection()
+        new GetCollection(),
     ]
 )]
 class Champion
@@ -28,6 +28,68 @@ class Champion
      * @MongoDB\Id(strategy="NONE", type="string")
      */
     protected $id;
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $idChamp;
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $key;
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $name;
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $title;
+
+        /**
+     * @MongoDB\Field(type="hash")
+     */
+    private array $image;
+
+        /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $skins = [];
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $lore;
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $blurb;
+
+        /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $tags = [];
+
+        /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $partype;
+    
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $spells = [];
+
+        /**
+     * @MongoDB\Field(type="hash")
+     */
+    protected $passive = [];
+
+    // GETTER & SETTER
 
     public function getId(): ?string
     {
@@ -40,11 +102,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $idChamp;
-
     public function getIdChamp(): ?string
     {
         return $this->idChamp;
@@ -55,11 +112,6 @@ class Champion
         $this->idChamp = $idChamp;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $key;
 
     public function getKey(): ?string
     {
@@ -72,11 +124,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $name;
-
     public function getName(): ?string
     {
         return $this->name;
@@ -87,11 +134,6 @@ class Champion
         $this->name = $name;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $title;
 
     public function getTitle(): ?string
     {
@@ -104,11 +146,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="hash")
-     */
-    protected $image = [];
-
     public function getImage(): array
     {
         return $this->image;
@@ -119,11 +156,6 @@ class Champion
         $this->image = $image;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="hash")
-     */
-    protected $skins = [];
 
     public function getSkins(): array
     {
@@ -136,11 +168,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $lore;
-
     public function getLore(): ?string
     {
         return $this->lore;
@@ -151,11 +178,6 @@ class Champion
         $this->lore = $lore;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $blurb;
 
     public function getBlurb(): ?string
     {
@@ -168,11 +190,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="hash")
-     */
-    protected $tags = [];
-
     public function getTags(): array
     {
         return $this->tags;
@@ -183,11 +200,6 @@ class Champion
         $this->tags = $tags;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    protected $partype;
 
     public function getPartype(): ?string
     {
@@ -200,11 +212,6 @@ class Champion
         return $this;
     }
 
-    /**
-     * @MongoDB\Field(type="hash")
-     */
-    protected $spells = [];
-
     public function getSpells(): array
     {
         return $this->spells;
@@ -215,11 +222,6 @@ class Champion
         $this->spells = $spells;
         return $this;
     }
-
-    /**
-     * @MongoDB\Field(type="hash")
-     */
-    protected $passive = [];
 
     public function getPassive(): array
     {
