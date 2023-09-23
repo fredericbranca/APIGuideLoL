@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-use App\Document\Champion;
 use App\Document\Rune;
+use App\Document\Champion;
+use App\Document\SortInvocateur;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,8 +16,8 @@ class DataImportController extends AbstractController
     #[Route('/import-champion', name: 'import_champion')]
     public function importDataChampion(DocumentManager $dm)
     { {
-            $json = file_get_contents('championFull.json');
-            $data = json_decode($json, true);
+            $json = file_get_contents('data/championFull.json');
+            $data = json_decode($json, true)['data'];
 
             foreach ($data as $id => $championData) {
                 // Recherche du champion par son ID
@@ -33,7 +34,7 @@ class DataImportController extends AbstractController
                 $champion->setKey($championData['key']);
                 $champion->setName($championData['name']);
                 $champion->setTitle($championData['title']);
-                $champion->setImage($championData['image']);
+                $champion->setImage($championData['image']['full']);
                 $champion->setSkins($championData['skins']);
                 $champion->setLore($championData['lore']);
                 $champion->setBlurb($championData['blurb']);
@@ -53,7 +54,7 @@ class DataImportController extends AbstractController
     #[Route('/import-rune', name: 'import_rune')]
     public function importData(DocumentManager $dm)
     {
-        $json = file_get_contents('runesReforged.json');
+        $json = file_get_contents('data/runesReforged.json');
         $data = json_decode($json, true);
 
         foreach ($data as $id => $runeData) {
@@ -85,5 +86,37 @@ class DataImportController extends AbstractController
         $dm->flush();
 
         return new Response('Runes importées ou mise à jour avec succès !');
+    }
+
+    // Route pour importer les sorts d'invocateur
+    #[Route('/import-summoner', name: 'import_summoner')]
+    public function importSummonerSpells(DocumentManager $dm)
+    {
+        $json = file_get_contents('data/summoner.json');
+        $data = json_decode($json, true)['data'];
+
+        foreach ($data as $id => $spellData) {
+            // Recherche du sort d'invocateur par son ID
+            $spell = $dm->getRepository(SortInvocateur::class)->findOneBy(['id' => $id]);
+
+            // Création du sort d'invocateur s'il n'existe pas encore
+            if (!$spell) {
+                $spell = new SortInvocateur;
+                $spell->setId($spellData['id']);
+                $dm->persist($spell);
+            }
+
+            $spell->setIdSort($spellData['id']);
+            $spell->setName($spellData['name']);
+            $spell->setDescription($spellData['description']);
+            $spell->setCooldown($spellData['cooldownBurn']);
+            $spell->setModes($spellData['modes']);
+            $spell->setRange($spellData['rangeBurn']);
+            $spell->setImage($spellData['image']['full']);
+        }
+
+        $dm->flush();
+
+        return new Response('Sorts d\'invocateur importés ou mis à jour avec succès !');
     }
 }

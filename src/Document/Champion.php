@@ -50,9 +50,9 @@ class Champion
     private $title;
 
     /**
-     * @MongoDB\Field(type="hash")
+     * @MongoDB\Field(type="string")
      */
-    private array $image;
+    private $image;
 
     /**
      * @MongoDB\Field(type="hash")
@@ -146,12 +146,12 @@ class Champion
         return $this;
     }
 
-    public function getImage(): array
+    public function getImage(): string
     {
         return $this->image;
     }
 
-    public function setImage(array $image): self
+    public function setImage(string $image): self
     {
         $this->image = $image;
         return $this;
