@@ -1,7 +1,7 @@
 {
   "type": "champion",
   "format": "full",
-  "version": "13.18.1",
+  "version": "13.20.1",
   "data": {
     "Aatrox": {
       "id": "Aatrox",
@@ -872,7 +872,19 @@
           "name": "Akali gardienne des étoiles",
           "chromas": false
         },
-        { "id": "84068", "num": 68, "name": "DRX Akali", "chromas": false }
+        { "id": "84068", "num": 68, "name": "DRX Akali", "chromas": false },
+        {
+          "id": "84070",
+          "num": 70,
+          "name": "Akali de l'assemblée",
+          "chromas": false
+        },
+        {
+          "id": "84071",
+          "num": 71,
+          "name": "Akali de l'assemblée prestige",
+          "chromas": true
+        }
       ],
       "lore": "Ayant abandonné l'Ordre Kinkou et le titre de Poing de l'ombre, Akali combat aujourd'hui seule, prête à devenir l'arme mortelle dont son peuple a besoin. Bien qu'elle n'oublie rien de tout ce que son maître Shen lui a enseigné, elle a juré de défendre Ionia contre ses ennemis, une élimination après l'autre. Akali tue sans faire de bruit, mais son message est fort et clair : craignez l'assassin sans maître.",
       "blurb": "Ayant abandonné l'Ordre Kinkou et le titre de Poing de l'ombre, Akali combat aujourd'hui seule, prête à devenir l'arme mortelle dont son peuple a besoin. Bien qu'elle n'oublie rien de tout ce que son maître Shen lui a enseigné, elle a juré de défendre...",
@@ -1239,13 +1251,15 @@
               "Délai de récupération",
               "Coût en @AbilityResourceName@",
               "Dégâts",
-              "% de dégâts aux sbires"
+              "% de dégâts aux sbires",
+              "Vitesse de déplacement"
             ],
             "effect": [
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ cost }} -> {{ costNL }}",
               "{{ basedamage }} -> {{ basedamageNL }}",
-              "{{ secondarytargetdamage*100.000000 }}% -> {{ secondarytargetdamagenl*100.000000 }}%"
+              "{{ secondarytargetdamage*100.000000 }}% -> {{ secondarytargetdamagenl*100.000000 }}%",
+              "{{ hastevalue*100.000000 }}% -> {{ hastevaluenl*100.000000 }}%"
             ]
           },
           "maxrank": 5,
@@ -3398,7 +3412,7 @@
         {
           "id": "22009",
           "num": 9,
-          "name": "Ashe du championnat",
+          "name": "Ashe du Mondial 2017",
           "chromas": true
         },
         {
@@ -4182,8 +4196,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [12, 10.5, 9, 7.5, 6],
-          "cooldownBurn": "12/10.5/9/7.5/6",
+          "cooldown": [14, 12, 10, 8, 6],
+          "cooldownBurn": "14/12/10/8/6",
           "cost": [70, 80, 90, 100, 110],
           "costBurn": "70/80/90/100/110",
           "datavalues": {},
@@ -4595,7 +4609,7 @@
             "effect": [
               "{{ e5 }} -> {{ e5NL }}",
               "{{ e6 }} -> {{ e6NL }}",
-              "{{ movespeed_base*100.000000 }} -> {{ movespeed_basenl*100.000000 }}"
+              "{{ movespeed_base*100.000000 }}% -> {{ movespeed_basenl*100.000000 }}%"
             ]
           },
           "maxrank": 5,
@@ -4971,9 +4985,14 @@
           "description": "Bel'Veth s'immobilise et canalise une tempête de coups autour d'elle qui cible l'ennemi ayant le moins de PV. De plus, elle gagne du vol de vie et de la réduction des dégâts.",
           "tooltip": "Bel'Veth canalise une tempête de coups autour d'elle. Elle gagne alors +{{ drpercent*100 }}% de réduction des dégâts et +{{ totallifesteal }} vol de vie, et elle attaque {{ f2.0 }} fois en {{ totalduration }} sec (le nombre d'attaques augmente avec la <attackSpeed>vitesse d'attaque</attackSpeed>). Chaque attaque frappe l'ennemi qui a le moins de PV, lui infligeant <physicalDamage>{{ damageperstrike }}</physicalDamage> - <physicalDamage>{{ maxdamageperstriketooltip }} pts de dégâts physiques</physicalDamage> selon les PV manquants de la cible.<br /><br />Lancer une autre compétence ou <recast>réactiver</recast> cette compétence y met fin prématurément.<br />{{ spellmodifierdescriptionappend }}",
           "leveltip": {
-            "label": ["Dégâts", "Délai de récupération"],
+            "label": [
+              "Dégâts",
+              "Réduction des dégâts",
+              "Délai de récupération"
+            ],
             "effect": [
               "{{ damageperhit }} -> {{ damageperhitNL }}",
+              "{{ drpercent*100.000000 }}% -> {{ drpercentnl*100.000000 }}%",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -6271,10 +6290,10 @@
       "allytips": [],
       "enemytips": [],
       "tags": ["Fighter", "Assassin"],
-      "partype": "Aucune",
+      "partype": "Fureur",
       "info": { "attack": 9, "defense": 5, "magic": 3, "difficulty": 3 },
       "stats": {
-        "hp": 590,
+        "hp": 610,
         "hpperlevel": 100,
         "mp": 0,
         "mpperlevel": 0,
@@ -6292,7 +6311,7 @@
         "critperlevel": 0,
         "attackdamage": 60,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 2.5,
+        "attackspeedperlevel": 2.3,
         "attackspeed": 0.644
       },
       "spells": [
@@ -6442,8 +6461,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [18, 18, 18, 18, 18],
-          "cooldownBurn": "18",
+          "cooldown": [16, 16, 16, 16, 16],
+          "cooldownBurn": "16",
           "cost": [0, 0, 0, 0, 0],
           "costBurn": "0",
           "datavalues": {},
@@ -9258,6 +9277,12 @@
           "num": 39,
           "name": "Draven Nuit d'effroi",
           "chromas": true
+        },
+        {
+          "id": "119048",
+          "num": 48,
+          "name": "Draven La Ilusión",
+          "chromas": true
         }
       ],
       "lore": "À Noxus, de puissants guerriers, les « arénaires », s'affrontent dans des jeux mortels pour divertir le public. Le sang y coule à foison et leurs forces y sont éprouvées, mais aucun d'entre eux n'a jamais été aussi célèbre que Draven. Cet ancien soldat découvrit que le public appréciait particulièrement son sens du spectacle, sans parler de son habileté avec des haches tournoyantes. Épris de sa propre perfection, Draven terrasse tous ses adversaires pour s'assurer que son nom continue de résonner dans les arènes de l'empire.",
@@ -10350,6 +10375,12 @@
           "id": "60015",
           "num": 15,
           "name": "Elise rose fanée",
+          "chromas": true
+        },
+        {
+          "id": "60024",
+          "num": 24,
+          "name": "Elise de l'assemblée",
           "chromas": true
         }
       ],
@@ -11890,7 +11921,7 @@
           "name": "Fiora percecœur",
           "chromas": true
         },
-        { "id": "114031", "num": 31, "name": "iG Fiora", "chromas": false },
+        { "id": "114031", "num": 31, "name": "iG Fiora", "chromas": true },
         {
           "id": "114041",
           "num": 41,
@@ -12784,8 +12815,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [18, 17.5, 17, 16.5, 16],
-          "cooldownBurn": "18/17.5/17/16.5/16",
+          "cooldown": [18, 17, 16, 15, 14],
+          "cooldownBurn": "18/17/16/15/14",
           "cost": [50, 50, 50, 50, 50],
           "costBurn": "50",
           "datavalues": {},
@@ -12905,8 +12936,8 @@
             ]
           },
           "maxrank": 3,
-          "cooldown": [200, 180, 160],
-          "cooldownBurn": "200/180/160",
+          "cooldown": [180, 160, 140],
+          "cooldownBurn": "180/160/140",
           "cost": [100, 100, 100],
           "costBurn": "100",
           "datavalues": {},
@@ -13281,45 +13312,45 @@
           "id": "GangplankR",
           "name": "Tir de barrage",
           "description": "Gangplank demande à son navire de bombarder une zone, ralentissant et blessant les ennemis.",
-          "tooltip": "Gangplank ordonne à son navire de tirer {{ f3 }} vagues de boulets de canon en {{ e3 }} sec, n'importe où sur la carte. Chaque vague <status>ralentit</status> de {{ e2 }}% pendant {{ e6 }} sec et inflige <magicDamage>{{ onewavedamage }} pts de dégâts magiques</magicDamage>.<br /><br />Cette compétence peut être améliorée à la boutique via <spellName>Pourparlers</spellName>.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Gangplank ordonne à son navire de tirer {{ totalwavestooltip }} vagues de boulets de canon en {{ zoneduration }} sec, n'importe où sur la carte. Chaque vague <status>ralentit</status> de {{ slowpercent }}% pendant {{ slowduration }} sec et inflige <magicDamage>{{ onewavedamage }} pts de dégâts magiques</magicDamage>. Dégâts max : {{ totaldamagetooltip }}.<br /><br />Cette compétence peut être améliorée à la boutique via <spellName>Pourparlers</spellName>.<br /><br /><spellName>Feu à volonté</spellName> : tire 6 vagues de boulets de canon supplémentaires.<br /><spellName>Jeune Camarde</spellName> : tire un énorme boulet de canon qui inflige <trueDamage>{{ deathsdaughterdamage }} pts de dégâts bruts</trueDamage> et un <status>ralentissement</status> de {{ deathsdaughterslow }}% pendant {{ deathsdaughterslowduration }} sec.<br /><spellName>Moral élevé</spellName> : les alliés dans la zone de Tir de barrage gagnent <speed>+{{ raisemoralehaste }}% de vitesse de déplacement</speed> pendant {{ raisemoralehasteduration }} sec.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts par vague", "Délai de récupération"],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ damageperwave }} -> {{ damageperwaveNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
           "maxrank": 3,
-          "cooldown": [180, 160, 140],
-          "cooldownBurn": "180/160/140",
+          "cooldown": [170, 150, 130],
+          "cooldownBurn": "170/150/130",
           "cost": [100, 100, 100],
           "costBurn": "100",
           "datavalues": {},
           "effect": [
             null,
-            [40, 70, 100],
-            [30, 30, 30],
-            [8, 8, 8],
-            [2, 2, 2],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
             [1.5, 0.5, 0.5],
-            [0.5, 0.5, 0.5],
+            [0, 0, 0],
             [300, 300, 300],
-            [60, 60, 60],
+            [75, 75, 75],
             [1, 1, 1],
-            [30, 30, 30]
+            [40, 40, 40]
           ],
           "effectBurn": [
             null,
-            "40/70/100",
-            "30",
-            "8",
-            "2",
+            "0",
+            "0",
+            "0",
+            "0",
             "1.5/0.5/0.5",
-            "0.5",
+            "0",
             "300",
-            "60",
+            "75",
             "1",
-            "30"
+            "40"
           ],
           "vars": [],
           "costType": " {{ abilityresourcename }}",
@@ -13786,7 +13817,18 @@
           "name": "Gnar astronaute",
           "chromas": true
         },
-        { "id": "150022", "num": 22, "name": "Gnar sylvestre", "chromas": true }
+        {
+          "id": "150022",
+          "num": 22,
+          "name": "Gnar sylvestre",
+          "chromas": true
+        },
+        {
+          "id": "150031",
+          "num": 31,
+          "name": "Gnar La Ilusión",
+          "chromas": true
+        }
       ],
       "lore": "Gnar est un yordle primitif dont les manières joyeuses peuvent soudain faire place à une colère irrationnelle. Il se transforme alors en une bête colossale portée à la destruction. Gelé dans de la glace pure pendant des millénaires, la curieuse créature s'est libérée de sa prison. Aujourd'hui, il parcourt avec enthousiasme un monde qu'il trouve exotique et merveilleux. Enchanté par le danger, Gnar lance à ses ennemis tout ce qu'il trouve, qu'il s'agisse de son boomerang en croc ou d'un bâtiment proche.",
       "blurb": "Gnar est un yordle primitif dont les manières joyeuses peuvent soudain faire place à une colère irrationnelle. Il se transforme alors en une bête colossale portée à la destruction. Gelé dans de la glace pure pendant des millénaires, la curieuse créature...",
@@ -17883,7 +17925,8 @@
           "name": "Jax conquérant prestige",
           "chromas": false
         },
-        { "id": "24022", "num": 22, "name": "Jax empyréen", "chromas": true }
+        { "id": "24022", "num": 22, "name": "Jax empyréen", "chromas": true },
+        { "id": "24032", "num": 32, "name": "Néo Jax PAX", "chromas": false }
       ],
       "lore": "Jax, dont nul ne peut égaler l'art du sarcasme et des armements inhabituels, est connu comme le dernier maître d'armes d'Icathia. Après la chute de sa terre natale, ravagée par le Néant qu'elle avait eu l'orgueil de déchaîner, Jax et ses compagnons jurèrent de protéger le peu qu'il en restait. La magie montant de nouveau dans le monde, la menace se fait plus pressante et Jax parcourt Valoran, porteur des dernières lumières d'Icathia. Il éprouve les qualités de tous les guerriers qu'il rencontre pour voir s'ils sont assez puissants pour combattre à ses côtés...",
       "blurb": "Jax, dont nul ne peut égaler l'art du sarcasme et des armements inhabituels, est connu comme le dernier maître d'armes d'Icathia. Après la chute de sa terre natale, ravagée par le Néant qu'elle avait eu l'orgueil de déchaîner, Jax et ses compagnons...",
@@ -17922,7 +17965,7 @@
       },
       "spells": [
         {
-          "id": "JaxLeapStrike",
+          "id": "JaxQ",
           "name": "Frappe bondissante",
           "description": "Jax bondit sur une unité. S'il s'agit d'un ennemi, il le frappe avec son arme.",
           "tooltip": "Jax bondit sur une unité ou une balise alliée ou ennemie, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage> s'il s'agit d'un ennemi.{{ spellmodifierdescriptionappend }}",
@@ -17971,7 +18014,7 @@
           "range": [700, 700, 700, 700, 700],
           "rangeBurn": "700",
           "image": {
-            "full": "JaxLeapStrike.png",
+            "full": "JaxQ.png",
             "sprite": "spell5.png",
             "group": "spell",
             "x": 0,
@@ -17982,14 +18025,14 @@
           "resource": "{{ cost }} {{ abilityresourcename }}"
         },
         {
-          "id": "JaxEmpowerTwo",
+          "id": "JaxW",
           "name": "Élargissement",
           "description": "Jax charge son arme en énergie pour infliger des dégâts supplémentaires avec sa prochaine attaque.",
           "tooltip": "Jax charge son arme en énergie pour que sa prochaine attaque ou <spellName>Frappe bondissante</spellName> inflige <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> supplémentaires.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ damage }} -> {{ damageNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -18001,7 +18044,7 @@
           "datavalues": {},
           "effect": [
             null,
-            [50, 85, 120, 155, 190],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -18014,7 +18057,7 @@
           ],
           "effectBurn": [
             null,
-            "50/85/120/155/190",
+            "0",
             "0",
             "0",
             "0",
@@ -18031,7 +18074,7 @@
           "range": [300, 300, 300, 300, 300],
           "rangeBurn": "300",
           "image": {
-            "full": "JaxEmpowerTwo.png",
+            "full": "JaxW.png",
             "sprite": "spell5.png",
             "group": "spell",
             "x": 48,
@@ -18042,7 +18085,7 @@
           "resource": "{{ cost }} {{ abilityresourcename }}"
         },
         {
-          "id": "JaxCounterStrike",
+          "id": "JaxE",
           "name": "Contre-attaque",
           "description": "Jax est capable d'esquiver toutes les attaques pendant un bref instant puis d'étourdir tous les ennemis proches en contre-attaquant.",
           "tooltip": "Jax prend une posture défensive pendant un maximum de {{ dodgeduration }} sec, esquivant les attaques et réduisant de {{ aoedamagereduction }}% les dégâts que lui infligent les compétences à effet de zone. Au bout de {{ dodgeduration }} sec ou à la <recast>réactivation</recast>, Jax inflige des <magicDamage>dégâts magiques équivalents à {{ totaldamage }} + {{ percenthealthdamage }}% des PV max</magicDamage> et il <status>étourdit</status> les ennemis proches pendant {{ stunduration }} sec. <br /><br />Les dégâts sont augmentés de {{ percentincreasedperdodge*100 }}% par attaque esquivée, jusqu'à un maximum de <magicDamage>{{ maxdamage }} + {{ maxpercenthealthdamage }}% des PV max</magicDamage>.{{ spellmodifierdescriptionappend }}",
@@ -18059,8 +18102,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [15, 13.5, 12, 10.5, 9],
-          "cooldownBurn": "15/13.5/12/10.5/9",
+          "cooldown": [14, 12.5, 11, 9.5, 8],
+          "cooldownBurn": "14/12.5/11/9.5/8",
           "cost": [50, 60, 70, 80, 90],
           "costBurn": "50/60/70/80/90",
           "datavalues": {},
@@ -18096,7 +18139,7 @@
           "range": [300, 300, 300, 300, 300],
           "rangeBurn": "300",
           "image": {
-            "full": "JaxCounterStrike.png",
+            "full": "JaxE.png",
             "sprite": "spell5.png",
             "group": "spell",
             "x": 96,
@@ -18107,10 +18150,10 @@
           "resource": "{{ cost }} {{ abilityresourcename }}"
         },
         {
-          "id": "JaxRApexForm",
+          "id": "JaxR",
           "name": "Maître d'armes",
           "description": "Toutes les trois attaques consécutives, Jax inflige des dégâts magiques supplémentaires. De plus, Jax peut activer cette compétence pour infliger des dégâts autour de lui et renforcer sa détermination, ce qui augmente son armure et sa résistance magique pendant un court instant.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> toutes les 3 attaques en moins de 3 sec, Jax inflige <magicDamage>{{ onhitdamage }} pts de dégâts magiques</magicDamage> supplémentaires.<br /><br /><spellActive>Active :</spellActive> Jax donne un coup de lanterne qui inflige <magicDamage>{{ swingdamagetotal }} pts de dégâts magiques</magicDamage> aux ennemis proches. S'il touche un champion, il gagne <scaleArmor>+{{ basearmor }} armure</scaleArmor> et <scaleMR>+{{ basemr }} résistance magique</scaleMR> (plus <scaleArmor>+{{ bonusarmor }} armure</scaleArmor> et <scaleMR>+{{ bonusmr }} résistance magique</scaleMR> par champion touché supplémentaire) pendant {{ duration }} sec. Pendant cette même durée, Jax inflige des <magicDamage>dégâts magiques</magicDamage> supplémentaires toutes les 2 attaques, au lieu de toutes les 3 attaques.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "<spellPassive>Passive :</spellPassive> toutes les 3 attaques en moins de {{ passivefallofftime }} sec, Jax inflige <magicDamage>{{ onhitdamage }} pts de dégâts magiques</magicDamage> supplémentaires.<br /><br /><spellActive>Active :</spellActive> Jax donne un coup de lanterne qui inflige <magicDamage>{{ swingdamagetotal }} pts de dégâts magiques</magicDamage> aux ennemis proches. S'il touche un champion, il gagne <scaleArmor>+{{ basearmor }} armure</scaleArmor> et <scaleMR>+{{ basemr }} résistance magique</scaleMR> (plus <scaleArmor>+{{ bonusarmor }} armure</scaleArmor> et <scaleMR>+{{ bonusmr }} résistance magique</scaleMR> par champion touché supplémentaire) pendant {{ duration }} sec. Pendant cette même durée, Jax inflige des <magicDamage>dégâts magiques</magicDamage> supplémentaires toutes les 2 attaques, au lieu de toutes les 3 attaques.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts passifs",
@@ -18134,8 +18177,8 @@
           "maxrank": 3,
           "cooldown": [100, 90, 80],
           "cooldownBurn": "100/90/80",
-          "cost": [100, 100, 100],
-          "costBurn": "100",
+          "cost": [50, 50, 50],
+          "costBurn": "50",
           "datavalues": {},
           "effect": [
             null,
@@ -18169,7 +18212,7 @@
           "range": [260, 260, 260],
           "rangeBurn": "260",
           "image": {
-            "full": "JaxRApexForm.png",
+            "full": "JaxR.png",
             "sprite": "spell5.png",
             "group": "spell",
             "x": 144,
@@ -18989,7 +19032,7 @@
       "info": { "attack": 9, "defense": 2, "magic": 4, "difficulty": 6 },
       "stats": {
         "hp": 630,
-        "hpperlevel": 100,
+        "hpperlevel": 105,
         "mp": 260,
         "mpperlevel": 50,
         "movespeed": 325,
@@ -19220,8 +19263,8 @@
             ]
           },
           "maxrank": 3,
-          "cooldown": [75, 65, 55],
-          "cooldownBurn": "75/65/55",
+          "cooldown": [70, 60, 50],
+          "cooldownBurn": "70/60/50",
           "cost": [100, 100, 100],
           "costBurn": "100",
           "datavalues": {},
@@ -19377,7 +19420,7 @@
         "mp": 345,
         "mpperlevel": 40,
         "movespeed": 335,
-        "armor": 28,
+        "armor": 25,
         "armorperlevel": 4.2,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
@@ -19693,7 +19736,7 @@
         {
           "id": "429002",
           "num": 2,
-          "name": "Kalista du championnat",
+          "name": "Kalista du Mondial 2015",
           "chromas": true
         },
         {
@@ -21430,7 +21473,7 @@
           "id": "KatarinaEWrapper",
           "name": "Shunpo",
           "description": "Katarina se téléporte près de sa cible. S'il s'agit d'un ennemi, elle le frappe. Sinon, elle frappe l'ennemi le plus proche.",
-          "tooltip": "Katarina se rue en un éclair sur l'allié, l'ennemi ou la <keywordMajor>dague</keywordMajor> ciblés. Si la cible est un ennemi, Katarina lui inflige <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. Sinon, elle frappe l'ennemi le plus proche à portée.<br /><br />Ramasser une <keywordMajor>dague</keywordMajor> réduira de <scaleLevel>{{ daggercooldownreduction }}</scaleLevel> sec (<scaleLevel>{{ tooltipdaggerreduction }}</scaleLevel>) le délai de récupération de cette compétence.<br /><br /><rules>Katarina peut se téléporter n'importe où près de la cible.</rules>{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Katarina se rue en un éclair sur l'allié, l'ennemi ou la <keywordMajor>dague</keywordMajor> ciblés. Si la cible est un ennemi, Katarina lui inflige <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. Sinon, elle frappe l'ennemi le plus proche à portée.<br /><br />Ramasser une <keywordMajor>dague</keywordMajor> réduira de <scaleLevel>{{ daggercooldownreduction }}</scaleLevel> sec (<scaleLevel>{{ tooltipdaggerreduction }}</scaleLevel>) le délai de récupération de cette compétence. Katarina peut se téléporter n'importe où près de la cible.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
@@ -22613,12 +22656,14 @@
             "label": [
               "Dégâts",
               "Bonus d'armure",
-              "Bonus de résistance magique"
+              "Bonus de résistance magique",
+              "Délai de récupération"
             ],
             "effect": [
               "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
-              "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}"
+              "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
+              "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
           "maxrank": 3,
@@ -22723,7 +22768,7 @@
         {
           "id": "121011",
           "num": 11,
-          "name": "Kha'Zix du championnat",
+          "name": "Kha'Zix du Mondial 2018",
           "chromas": true
         },
         {
@@ -24140,13 +24185,13 @@
       "partype": "Mana",
       "info": { "attack": 8, "defense": 8, "magic": 7, "difficulty": 9 },
       "stats": {
-        "hp": 610,
-        "hpperlevel": 108,
+        "hp": 570,
+        "hpperlevel": 115,
         "mp": 290,
         "mpperlevel": 60,
         "movespeed": 330,
         "armor": 33,
-        "armorperlevel": 4.7,
+        "armorperlevel": 5.2,
         "spellblock": 30,
         "spellblockperlevel": 2.1,
         "attackrange": 175,
@@ -24166,7 +24211,7 @@
           "id": "KSanteQ",
           "name": "Coups de ntofo",
           "description": "K'Santé frappe devant lui, blessant et ralentissant tous les ennemis sur une courte ligne.<br><br>À l'impact, cela lui octroie un effet pendant quelques secondes. À 2 effets cumulés, cette compétence tire une onde de choc qui attire les ennemis.",
-          "tooltip": "K'Santé assène un puissant coup avec son arme, infligeant <physicalDamage>{{ basedamage }} pts de dégâts physiques</physicalDamage> et <status>ralentissant</status> les ennemis touchés de {{ slowpercent*100 }}% pendant un court instant.<br /><br />Quand un ennemi est touché, K'Santé gagne un effet de Coups de ntofo pendant {{ recastwindow }} sec. À 2 effets cumulés, K'Santé tire à la place une onde de choc qui <status>étourdit</status> et <status>attire</status> les ennemis pendant {{ stunduration }} sec.<br /><br /><keywordMajor>Grand jeu</keywordMajor> : cette compétence n'inflige plus de <status>ralentissement</status>, mais son délai de récupération est réduit de {{ cooldownbonusao }} sec.<br />{{ spellmodifierdescriptionappend }}",
+          "tooltip": "K'Santé assène un puissant coup avec son arme, infligeant <physicalDamage>{{ basedamage }} pts de dégâts physiques</physicalDamage> et <status>ralentissant</status> les ennemis touchés de {{ slowpercent*100 }}% pendant un court instant.<br /><br />Quand un ennemi est touché, K'Santé gagne un effet de Coups de ntofo pendant {{ recastwindow }} sec. À 2 effets cumulés, K'Santé tire à la place une onde de choc qui <status>étourdit</status> et <status>attire</status> les ennemis pendant {{ stunduration }} sec.<br /><br /><keywordMajor>Grand jeu</keywordMajor> : le délai de récupération de cette compétence est réduit de 25% et son délai d'incantation est réduit de {{ alloutqcasttimereduce }} sec.<br />{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts"],
             "effect": ["{{ flatdamage }} -> {{ flatdamageNL }}"]
@@ -24223,28 +24268,26 @@
           "id": "KSanteW",
           "name": "Pour Nazumah !",
           "description": "K'Santé charge son attaque avant d'effectuer une ruée. K'Santé est impossible à arrêter et subit moins de dégâts pendant sa charge. Les cibles touchées par la ruée sont repoussées jusqu'au bout de sa portée et sont étourdies.<br><br>",
-          "tooltip": "<charge>Début de la charge :</charge> K'Santé lève ses armes en position défensive pendant un maximum de {{ maxduration }} sec, devenant impossible à arrêter et réduisant de {{ damagereductioncalc }} les dégâts qu'il subit.<br /><br /><release>Relâchement :</release> K'Santé fonce droit devant, infligeant de <physicalDamage>{{ wminpercenthealthdamage }} à {{ wmaxpercenthealthdamage }} des PV max en dégâts physiques</physicalDamage>, selon la durée de la charge de cette compétence. K'Santé <status>repousse</status> et <status>étourdit</status> les ennemis pendant une durée allant de {{ minknockbackduration }} à {{ maxknockbackduration }} sec.<br /><br /><keywordMajor>Grand jeu :</keywordMajor> le délai de récupération de cette compétence est réinitialisé. Cette compétence ne <status>repousse</status> plus et n'<status>étourdit</status> plus. La réduction des dégâts par cette compétence augmente à {{ damagereductioncalcao }}. Cette compétence inflige de <physicalDamage>{{ minflatdamageaocalc }} à {{ maxflatdamageaocalc }}</physicalDamage> <physicalDamage>pts de dégâts physiques</physicalDamage> supplémentaires. Les vitesses de sa charge et de sa ruée sont doublées.<br />{{ spellmodifierdescriptionappend }}",
+          "tooltip": "K'Santé lève ses armes en position défensive pendant {{ mindurationtooltip }} - {{ maxduration }} sec, devenant impossible à arrêter et réduisant de {{ damagereductioncharlevel }}% les dégâts qu'il subit.<br /><br />Après la canalisation, il fonce droit devant, infligeant <physicalDamage>{{ basedamagecalc }} + {{ maxhealthdamage*100 }}% des PV max en dégâts physiques</physicalDamage>. K'Santé <status>repousse</status> et <status>étourdit</status> pendant {{ maxknockbackduration }} sec les ennemis dans lesquels il fonce.<br /><br /><keywordMajor>Grand jeu :</keywordMajor> le délai de récupération de cette compétence est réinitialisé. Cette compétence ne <status>repousse</status> plus, n'<status>étourdit</status> plus et charge seulement pendant {{ aomindurationtooltip }} sec. La réduction des dégâts par cette compétence augmente à {{ damagereductioncalcao }}%, sa vitesse de ruée augmente et son délai de récupération diminue.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
-              "Pourcentage minimum des PV en dégâts",
-              "Pourcentage maximum des PV en dégâts",
-              "Dégâts fixes minimum de Grand jeu",
-              "Dégâts fixes maximum de Grand jeu",
-              "Délai de récupération"
+              "Dégâts de base",
+              "% des PV max",
+              "Délai de récupération",
+              "Coût en @AbilityResourceName@"
             ],
             "effect": [
-              "{{ minpercenthealthbase*100.000000 }} -> {{ minpercenthealthbasenl*100.000000 }}",
-              "{{ maxpercenthealthbase*100.000000 }} -> {{ maxpercenthealthbasenl*100.000000 }}",
-              "{{ minflatdamageao }} -> {{ minflatdamageaoNL }}",
-              "{{ maxflatdamageao }} -> {{ maxflatdamageaoNL }}",
-              "{{ cooldown }} -> {{ cooldownNL }}"
+              "{{ basedamage }} -> {{ basedamageNL }}",
+              "{{ maxhealthdamage*100.000000 }}% -> {{ maxhealthdamagenl*100.000000 }}%",
+              "{{ cooldown }} -> {{ cooldownNL }}",
+              "{{ cost }} -> {{ costNL }}"
             ]
           },
           "maxrank": 5,
           "cooldown": [24, 22, 20, 18, 16],
           "cooldownBurn": "24/22/20/18/16",
-          "cost": [75, 80, 85, 90, 95],
-          "costBurn": "75/80/85/90/95",
+          "cost": [60, 65, 70, 75, 80],
+          "costBurn": "60/65/70/75/80",
           "datavalues": {},
           "effect": [
             null,
@@ -24357,17 +24400,23 @@
           "id": "KSanteR",
           "name": "Grand jeu",
           "description": "K'Santé repousse un ennemi. Si ce dernier touche un mur, il le traverse et subit plus de dégâts. K'Santé apparaît derrière la cible et sort le Grand jeu, ce qui réduit ses défenses, mais augmente grandement ses dégâts.<br><br>",
-          "tooltip": "K'Santé brise ses ntofos, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage> et <status>repoussant</status> un champion ennemi. Si ce dernier touche un mur, il subit à la place <physicalDamage>{{ totaldamageslamdown }} pts de dégâts physiques</physicalDamage>, est <status>repoussé</status> par-delà le mur et est <status>étourdi</status> un court instant. K'Santé se rue ensuite après cet ennemi et sort le <keywordMajor>Grand jeu</keywordMajor> pendant 20 sec.<br /><br /><keywordMajor>Grand jeu</keywordMajor> : K'Santé perd <healing>{{ healthlost*100 }}% de ses PV max</healing>, <scaleArmor>{{ defenseslost*100 }}% de son armure bonus</scaleArmor> et <scaleMR>{{ defenseslost*100 }}% de sa résistance magique bonus</scaleMR>. K'Santé gagne <attackDamage>+{{ alloutattackdamage }} dégâts d'attaque</attackDamage> et +{{ alloutomnivamp }} omnivampirisme, et il transforme ses compétences.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "K'Santé brise ses ntofos, infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> et <status>repoussant</status> un champion ennemi. Si ce dernier touche un mur, il subit <magicDamage>{{ totaldamageslamdown }} pts de dégâts magiques</magicDamage> supplémentaires, est <status>repoussé</status> par-delà le mur et est <status>étourdi</status> un court instant. K'Santé se rue ensuite après cet ennemi et sort le <keywordMajor>Grand jeu</keywordMajor> pendant 20 sec.<br /><br /><keywordMajor>Grand jeu</keywordMajor> : K'Santé perd <healing>{{ healthlost*100 }}% de ses PV max</healing>, <scaleArmor>{{ defenseslost*100 }}% de son armure bonus</scaleArmor> et <scaleMR>{{ defenseslost*100 }}% de sa résistance magique bonus</scaleMR>. À la place, il gagne <scaleAD>+{{ alloutattackdamage }} pts de dégâts d'attaque</scaleAD> et <attackSpeed>+{{ attackspeedincrease*100 }}% de vitesse d'attaque</attackSpeed>, et il récupère des PV équivalents à <healing>{{ alloutomnivamp }}%</healing> des dégâts qu'il inflige aux champions. De plus, il transforme ses compétences.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Délai de récupération",
               "Dégâts",
-              "Dégâts à l'impact d'un mur"
+              "Dégâts à l'impact d'un mur",
+              "Dégâts d'attaque",
+              "Vitesse d'attaque",
+              "Soins"
             ],
             "effect": [
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ basedamage }} -> {{ basedamageNL }}",
-              "{{ slamdownstrikedamage }} -> {{ slamdownstrikedamageNL }}"
+              "{{ slamdownstrikedamage }} -> {{ slamdownstrikedamageNL }}",
+              "{{ alloutbaseattackdamage }} -> {{ alloutbaseattackdamageNL }}",
+              "{{ attackspeedincrease*100.000000 }}% -> {{ attackspeedincreasenl*100.000000 }}%",
+              "{{ alloutbaseomnivamp }}% -> {{ alloutbaseomnivampNL }}%"
             ]
           },
           "maxrank": 3,
@@ -24471,7 +24520,7 @@
           "name": "Programme LeBlanc",
           "chromas": true
         },
-        { "id": "7019", "num": 19, "name": "iG LeBlanc", "chromas": false },
+        { "id": "7019", "num": 19, "name": "iG LeBlanc", "chromas": true },
         {
           "id": "7020",
           "num": 20,
@@ -24481,7 +24530,7 @@
         {
           "id": "7029",
           "num": 29,
-          "name": "LeBlanc du championnat",
+          "name": "LeBlanc du Mondial 2020",
           "chromas": true
         },
         {
@@ -24518,7 +24567,7 @@
         "hp": 598,
         "hpperlevel": 111,
         "mp": 400,
-        "mpperlevel": 55,
+        "mpperlevel": 25,
         "movespeed": 340,
         "armor": 22,
         "armorperlevel": 4.7,
@@ -24528,12 +24577,12 @@
         "hpregen": 7.5,
         "hpregenperlevel": 0.55,
         "mpregen": 8,
-        "mpregenperlevel": 1,
+        "mpregenperlevel": 0.8,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 55,
-        "attackdamageperlevel": 3.5,
-        "attackspeedperlevel": 1.4,
+        "attackdamageperlevel": 2.7,
+        "attackspeedperlevel": 2.2,
         "attackspeed": 0.625
       },
       "spells": [
@@ -24920,7 +24969,7 @@
         "mp": 200,
         "mpperlevel": 0,
         "movespeed": 345,
-        "armor": 34,
+        "armor": 36,
         "armorperlevel": 4.9,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -26110,7 +26159,7 @@
           "effect": [
             null,
             [70, 105, 140, 175, 210],
-            [1.1, 1.2, 1.3, 1.4, 1.5],
+            [1.25, 1.35, 1.45, 1.55, 1.65],
             [3, 3, 3, 3, 3],
             [8, 8, 8, 8, 8],
             [0, 0, 0, 0, 0],
@@ -26123,7 +26172,7 @@
           "effectBurn": [
             null,
             "70/105/140/175/210",
-            "1.1/1.2/1.3/1.4/1.5",
+            "1.25/1.35/1.45/1.55/1.65",
             "3",
             "8",
             "0",
@@ -30200,6 +30249,12 @@
           "num": 42,
           "name": "Mordekaiser ravageur de cendres",
           "chromas": true
+        },
+        {
+          "id": "82044",
+          "num": 44,
+          "name": "Mordekaiser dieu ancien",
+          "chromas": true
         }
       ],
       "lore": "Deux fois abattu et trois fois né, Mordekaiser est un chef de guerre brutal venu d'un lointain passé. Il utilise ses pouvoirs nécromantiques pour lier les âmes à une éternité de servitude. Il n'y a plus guère de gens pour se souvenir de ses anciennes conquêtes ou pour connaître l'étendue de ses vrais pouvoirs. Pourtant, certaines âmes antiques en ont gardé la mémoire et craignent le jour où il prétendra de nouveau régner sur les vivants et les morts.",
@@ -30775,8 +30830,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [24, 22, 20, 18, 16],
-          "cooldownBurn": "24/22/20/18/16",
+          "cooldown": [26, 23.5, 21, 18.5, 16],
+          "cooldownBurn": "26/23.5/21/18.5/16",
           "cost": [80, 80, 80, 80, 80],
           "costBurn": "80",
           "datavalues": {},
@@ -30826,16 +30881,18 @@
           "id": "MorganaR",
           "name": "Chaînes spirituelles",
           "description": "Morgana détache ses ailes, libérant toute sa puissance céleste et se mettant à survoler le sol. Elle lance des chaînes sombres sur les champions ennemis proches, gagnant de la vitesse de déplacement dans leur direction. Les chaînes ralentissent ces ennemis et leur infligent des dégâts ; après un délai, les ennemis qui n'ont pas brisé les chaînes sont étourdis.",
-          "tooltip": "Morgana s'enchaîne aux champions ennemis proches, leur infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> et les <status>ralentissant</status> de {{ slowpercent }}%. Au bout de {{ chainduration }} sec, les ennemis qui n'ont pas brisé leurs chaînes subissent <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> supplémentaires et sont <status>étourdis</status> pendant {{ stunduration }} sec.<br /><br />Pendant l'incantation de cette compétence, Morgana gagne <speed>+{{ hastepercent }}% de vitesse de déplacement</speed> en direction des ennemis enchaînés.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Morgana s'enchaîne aux champions ennemis proches, leur infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> et les <status>ralentissant</status> de {{ slowpercent }}%. Au bout de {{ chainduration }} sec, les ennemis qui n'ont pas brisé leurs chaînes subissent <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage> supplémentaires et sont <status>étourdis</status> pendant {{ stunduration }} sec.<br /><br />Pendant l'incantation de cette compétence, Morgana gagne <speed>+{{ hastepercent }}% de vitesse de déplacement</speed>.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts",
               "Vitesse de déplacement",
+              "Durée d'étourdissement",
               "Délai de récupération"
             ],
             "effect": [
               "{{ damage }} -> {{ damageNL }}",
               "{{ hastepercent }}% -> {{ hastepercentNL }}%",
+              "{{ stunduration }} -> {{ stundurationNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -31306,6 +31363,12 @@
           "num": 42,
           "name": "Nami astro-groove prestige",
           "chromas": false
+        },
+        {
+          "id": "267051",
+          "num": 51,
+          "name": "Nami de l'assemblée",
+          "chromas": true
         }
       ],
       "lore": "Jeune Vastaya des mers, Nami fut la première de la tribu des Marai à quitter les océans et à s'aventurer sur la terre ferme lorsque leur accord ancestral avec les Targoniens fut rompu. Convaincue qu'il n'y avait pas d'autre solution, elle a décidé de suivre le rituel sacré permettant de garantir la protection de son peuple. Plongée en plein chaos, Nami fait face à son avenir avec détermination, utilisant son bâton d'Aquamancienne pour invoquer la puissance des océans.",
@@ -32823,7 +32886,13 @@
           "name": "Nidalee du Chant de l'océan",
           "chromas": true
         },
-        { "id": "76039", "num": 39, "name": "Nidamiaou", "chromas": false }
+        { "id": "76039", "num": 39, "name": "Nidamiaou", "chromas": false },
+        {
+          "id": "76048",
+          "num": 48,
+          "name": "Nidalee La Ilusión",
+          "chromas": false
+        }
       ],
       "lore": "Élevée au plus profond de la jungle, Nidalee est une pisteuse d'exception qui peut se transformer à volonté en couguar. Ni totalement femme, ni totalement bête, elle défend férocement son territoire contre tous ceux qui veulent y pénétrer avec ses pièges judicieusement placés et sa lance. Elle estropie sa proie avant de se jeter sur elle sous sa forme de félin. Ceux qui survivent sont rares, et tous la décrivent comme une femme aux griffes aussi aiguisées que ses instincts...",
       "blurb": "Élevée au plus profond de la jungle, Nidalee est une pisteuse d'exception qui peut se transformer à volonté en couguar. Ni totalement femme, ni totalement bête, elle défend férocement son territoire contre tous ceux qui veulent y pénétrer avec ses...",
@@ -33163,6 +33232,12 @@
           "id": "895001",
           "num": 1,
           "name": "Nilah gardienne des étoiles",
+          "chromas": true
+        },
+        {
+          "id": "895011",
+          "num": 11,
+          "name": "Nilah de l'assemblée",
           "chromas": true
         }
       ],
@@ -36113,7 +36188,7 @@
       "info": { "attack": 9, "defense": 3, "magic": 1, "difficulty": 7 },
       "stats": {
         "hp": 670,
-        "hpperlevel": 104,
+        "hpperlevel": 110,
         "mp": 415,
         "mpperlevel": 50,
         "movespeed": 330,
@@ -36209,8 +36284,8 @@
             "effect": ["{{ cooldown }} -> {{ cooldownNL }}"]
           },
           "maxrank": 5,
-          "cooldown": [12, 11.5, 11, 10.5, 10],
-          "cooldownBurn": "12/11.5/11/10.5/10",
+          "cooldown": [12, 11, 10, 9, 8],
+          "cooldownBurn": "12/11/10/9/8",
           "cost": [50, 50, 50, 50, 50],
           "costBurn": "50",
           "datavalues": {},
@@ -36445,6 +36520,12 @@
           "id": "246030",
           "num": 30,
           "name": "Qiyana impératrice lunaire",
+          "chromas": true
+        },
+        {
+          "id": "246040",
+          "num": 40,
+          "name": "Qiyana La Ilusión",
           "chromas": true
         }
       ],
@@ -36806,11 +36887,11 @@
       "partype": "Mana",
       "info": { "attack": 9, "defense": 4, "magic": 2, "difficulty": 5 },
       "stats": {
-        "hp": 603,
+        "hp": 565,
         "hpperlevel": 107,
         "mp": 269,
         "mpperlevel": 35,
-        "movespeed": 335,
+        "movespeed": 330,
         "armor": 28,
         "armorperlevel": 4.7,
         "spellblock": 30,
@@ -36823,7 +36904,7 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 59,
-        "attackdamageperlevel": 2.4,
+        "attackdamageperlevel": 2.7,
         "attackspeedperlevel": 3.1,
         "attackspeed": 0.668
       },
@@ -37149,6 +37230,12 @@
           "num": 27,
           "name": "Rakan de l'Alliance brisée",
           "chromas": true
+        },
+        {
+          "id": "497036",
+          "num": 36,
+          "name": "Rakan gardien des étoiles repenti",
+          "chromas": false
         }
       ],
       "lore": "Aussi lunatique qu'il est charmeur, Rakan est un trublion vastaya tristement célèbre, et le plus grand danseur guerrier de l'histoire de la tribu Lhotla. Pour les humains qui vivent dans les hautes terres d'Ionia, son nom est depuis longtemps synonyme de festivals endiablés, de fêtes déraisonnables et de musique anarchique. Peu de gens savent cependant que cet histrion ambulant est également le partenaire de Xayah, la rebelle, dont il défend avec ferveur la cause.",
@@ -37960,7 +38047,7 @@
           "effect": [
             null,
             [1500, 1500, 1500, 1500, 1500],
-            [50, 65, 80, 95, 110],
+            [50, 85, 120, 155, 190],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [1, 1, 1, 1, 1],
@@ -37973,7 +38060,7 @@
           "effectBurn": [
             null,
             "1500",
-            "50/65/80/95/110",
+            "50/85/120/155/190",
             "0",
             "0",
             "1",
@@ -38499,6 +38586,18 @@
           "num": 10,
           "name": "Renata Glasc Nuit d'effroi",
           "chromas": true
+        },
+        {
+          "id": "888020",
+          "num": 20,
+          "name": "Renata Glasc La Ilusión",
+          "chromas": true
+        },
+        {
+          "id": "888021",
+          "num": 21,
+          "name": "Renata Glasc La Ilusión prestige",
+          "chromas": false
         }
       ],
       "lore": "Renata Glasc s'extirpa des cendres de sa maison natale avec son nom et les recherches alchimiques de ses parents pour seules possessions. Au cours des décennies suivantes, elle devint la Baronne de la chimie la plus riche de Zaun et un génie des affaires capable de faire converger les intérêts de tous vers les siens. Travaillez avec elle et vous serez généreusement récompensé. Opposez-vous à elle et vous ne manquerez pas d'occasions de le regretter. Sachez seulement que tout le monde finit par se rallier à elle.",
@@ -38884,6 +38983,12 @@
           "num": 33,
           "name": "Renekton héraut de l'aube",
           "chromas": true
+        },
+        {
+          "id": "58042",
+          "num": 42,
+          "name": "Renekton du Mondial 2023",
+          "chromas": true
         }
       ],
       "lore": "Originaire du désert brûlant de Shurima, Renekton est un Transfiguré terrifiant animé par la rage. Il était autrefois le guerrier le plus respecté de l'empire de Shurima, dont il avait mené les armées vers la victoire à maintes reprises. Cependant, après la chute de l'empire, Renekton fut enseveli sous les sables. Petit à petit, alors que le monde changeait, il sombra dans la démence. Désormais libre, son unique souhait est de retrouver et de tuer son frère Nasus qui, croit-il dans sa folie, est responsable des siècles qu'il a passés dans les ténèbres.",
@@ -38908,7 +39013,7 @@
         "movespeed": 345,
         "armor": 35,
         "armorperlevel": 5.2,
-        "spellblock": 32,
+        "spellblock": 28,
         "spellblockperlevel": 2.05,
         "attackrange": 125,
         "hpregen": 8,
@@ -39582,7 +39687,7 @@
         {
           "id": "92004",
           "num": 4,
-          "name": "Riven du championnat",
+          "name": "Riven du Mondial 2012",
           "chromas": false
         },
         {
@@ -39595,7 +39700,7 @@
         {
           "id": "92007",
           "num": 7,
-          "name": "Riven du championnat 2016",
+          "name": "Riven du Mondial 2016",
           "chromas": true
         },
         {
@@ -40350,7 +40455,7 @@
         {
           "id": "13011",
           "num": 11,
-          "name": "Ryze du championnat",
+          "name": "Ryze du Mondial 2019",
           "chromas": true
         },
         {
@@ -41040,7 +41145,7 @@
           "id": "113005",
           "num": 5,
           "name": "Sejuani chevaucheuse de Poro",
-          "chromas": false
+          "chromas": true
         },
         {
           "id": "113006",
@@ -43254,7 +43359,7 @@
         {
           "id": "102005",
           "num": 5,
-          "name": "Shyvana du championnat",
+          "name": "Shyvana du Mondial 2014",
           "chromas": true
         },
         {
@@ -46673,6 +46778,12 @@
           "num": 44,
           "name": "Syndra fleur spirituelle",
           "chromas": true
+        },
+        {
+          "id": "134054",
+          "num": 54,
+          "name": "Syndra de l'assemblée",
+          "chromas": true
         }
       ],
       "lore": "Syndra est une effrayante magicienne originaire d'Ionia, aux pouvoirs impressionnants. Enfant, elle perturba les anciens de son village avec sa magie sauvage et incontrôlée. Elle fut confiée à un maître dans l'espoir qu'elle apprendrait à se contrôler, mais elle finit par découvrir que son prétendu mentor limitait ses capacités. Créant des sphères d'énergie noire avec ses sentiments de douleur et de trahison, Syndra jura de détruire quiconque tenterait de la contrôler.",
@@ -48790,7 +48901,7 @@
         {
           "id": "412002",
           "num": 2,
-          "name": "Thresh du championnat",
+          "name": "Thresh du Mondial 2013",
           "chromas": true
         },
         {
@@ -50059,7 +50170,7 @@
           "id": "TryndamereQ",
           "name": "Soif de sang",
           "description": "Tryndamere s'épanouit lors des combats, ce qui accroît ses dégâts d'attaque au fur et à mesure qu'il subit des blessures. Il peut lancer Soif de sang pour consommer sa Fureur et se soigner.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> Tryndamere a soif de sang, ce qui augmente ses <scaleAD>dégâts d'attaque de {{ e1 }}</scaleAD> plus <scaleAD>{{ e2 }}</scaleAD> tous les 1% de PV manquants.<br /><br /><spellActive>Active :</spellActive> Tryndamere consomme sa <keywordMajor>Fureur</keywordMajor>, récupérant <healing>{{ baseheal }} PV plus {{ healperfury }} PV par point de Fureur</healing>.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "<spellPassive>Passive :</spellPassive> Tryndamere a soif de sang, ce qui augmente ses <scaleAD>dégâts d'attaque de {{ flatad }}</scaleAD> plus <scaleAD>{{ adperonepercentmissinghp }}</scaleAD> tous les 1% de PV manquants.<br /><br /><spellActive>Active :</spellActive> Tryndamere consomme sa <keywordMajor>Fureur</keywordMajor>, récupérant <healing>{{ baseheal }} PV plus {{ healperfury }} PV par point de Fureur</healing>.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts d'attaque",
@@ -50068,8 +50179,8 @@
               "PV rendus par point de Fureur"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
-              "{{ e2 }} -> {{ e2NL }}",
+              "{{ flatad }} -> {{ flatadNL }}",
+              "{{ adperonepercentmissinghp }} -> {{ adperonepercentmissinghpNL }}",
               "{{ basehealing }} -> {{ basehealingNL }}",
               "{{ bonushealperfury }} -> {{ bonushealperfuryNL }}"
             ]
@@ -50082,8 +50193,8 @@
           "datavalues": {},
           "effect": [
             null,
-            [10, 15, 20, 25, 30],
-            [0.15, 0.25, 0.35, 0.45, 0.55],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -50095,8 +50206,8 @@
           ],
           "effectBurn": [
             null,
-            "10/15/20/25/30",
-            "0.15/0.25/0.35/0.45/0.55",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -50126,7 +50237,7 @@
           "id": "TryndamereW",
           "name": "Moquerie",
           "description": "Tryndamere lance un hurlement, réduisant les dégâts d'attaque des champions proches. De plus, les ennemis ayant le dos tourné voient leur vitesse de déplacement être réduite.",
-          "tooltip": "Tryndamere lance des insultes, réduisant les dégâts d'attaque des champions de {{ adreduction*-1 }} pendant {{ e3 }} sec. Les ennemis ayant le dos tourné à Tryndamere sont <status>ralentis</status> de {{ slowpotency*-100 }}% pendant la même durée.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Tryndamere lance des insultes, réduisant les dégâts d'attaque des champions de {{ adreduction*-1 }} pendant {{ reductionduration }} sec. Les champions ennemis ayant le dos tourné à Tryndamere sont <status>ralentis</status> de {{ slowpotency*-100 }}% pendant la même durée.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Réduction des dégâts physiques", "Ralentissement"],
             "effect": [
@@ -50144,8 +50255,8 @@
             null,
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
-            [4, 4, 4, 4, 4],
-            [4, 4, 4, 4, 4],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -50157,8 +50268,8 @@
             null,
             "0",
             "0",
-            "4",
-            "4",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -50186,11 +50297,11 @@
           "id": "TryndamereE",
           "name": "Balafre",
           "description": "Tryndamere lance un coup de taille vers une unité ciblée, infligeant des dégâts aux ennemis sur son chemin.",
-          "tooltip": "Tryndamere tourbillonne à travers ses ennemis, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage> et générant <keywordMajor>{{ furygained }} pts de Fureur</keywordMajor> par ennemi touché.<br /><br />Le délai de récupération de cette compétence est réduit de {{ e2 }} sec quand Tryndamere inflige un coup critique et de {{ e3 }} sec quand il inflige un coup critique à un champion.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Tryndamere tourbillonne à travers ses ennemis, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage> et générant <keywordMajor>{{ nonchampfurygain }} pts de Fureur</keywordMajor> par ennemi touché (<keywordMajor>{{ champfurygain }} pts de Fureur</keywordMajor> contre les champions).<br /><br />Le délai de récupération de cette compétence est réduit de {{ nonchampcdrefund }} sec quand Tryndamere inflige un coup critique et de {{ champcdrefund }} sec quand il inflige un coup critique à un champion.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ damage }} -> {{ damageNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -50202,11 +50313,11 @@
           "datavalues": {},
           "effect": [
             null,
-            [80, 110, 140, 170, 200],
-            [0.75, 0.75, 0.75, 0.75, 0.75],
-            [1.5, 1.5, 1.5, 1.5, 1.5],
-            [2, 2, 2, 2, 2],
-            [5, 5, 5, 5, 5],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -50215,11 +50326,11 @@
           ],
           "effectBurn": [
             null,
-            "80/110/140/170/200",
-            "0.75",
-            "1.5",
-            "2",
-            "5",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -50728,7 +50839,7 @@
       ],
       "passive": {
         "name": "Dé pipé",
-        "description": "{{ Spell_SecondSight_Summary_@GameModeInteger@ }}",
+        "description": "Quand il tue une unité, Twisted Fate lance son dé ''porte-bonheur'' et reçoit entre 1 et 6 PO supplémentaires.",
         "image": {
           "full": "Cardmaster_SealFate.png",
           "sprite": "passive4.png",
@@ -52232,7 +52343,7 @@
           "id": "67010",
           "num": 10,
           "name": "Vayne voleuse d'âmes",
-          "chromas": false
+          "chromas": true
         },
         {
           "id": "67011",
@@ -55914,6 +56025,12 @@
           "num": 37,
           "name": "Xayah de l'Alliance brisée",
           "chromas": true
+        },
+        {
+          "id": "498038",
+          "num": 38,
+          "name": "Xayah gardienne des étoiles repentie",
+          "chromas": false
         }
       ],
       "lore": "Précise et meurtrière, Xayah est une révolutionnaire vastaya menant une guerre personnelle dans le but de sauver son peuple. Elle se sert de sa célérité, de sa ruse et de ses plumes tranchantes comme des rasoirs pour terrasser tous ceux qui se dressent sur sa route. Xayah se bat aux côtés de son partenaire et amant, Rakan, pour défendre leur tribu dépérissante et rendre à leur race ce qu'elle considère être sa gloire d'antan.",
@@ -58754,7 +58871,7 @@
         {
           "id": "238010",
           "num": 10,
-          "name": "Zed du championnat",
+          "name": "Zed du Mondial 2016",
           "chromas": true
         },
         {
@@ -58906,8 +59023,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [20, 18.5, 17, 15.5, 14],
-          "cooldownBurn": "20/18.5/17/15.5/14",
+          "cooldown": [20, 19.25, 18.5, 17.75, 17],
+          "cooldownBurn": "20/19.25/18.5/17.75/17",
           "cost": [40, 35, 30, 25, 20],
           "costBurn": "40/35/30/25/20",
           "datavalues": {},
@@ -59140,7 +59257,7 @@
         "hpperlevel": 110,
         "mp": 250,
         "mpperlevel": 45,
-        "movespeed": 335,
+        "movespeed": 330,
         "armor": 24,
         "armorperlevel": 4.2,
         "spellblock": 30,
@@ -59498,7 +59615,13 @@
           "name": "Ziggs Hextech",
           "chromas": false
         },
-        { "id": "115024", "num": 24, "name": "Ziggs abeille", "chromas": true }
+        { "id": "115024", "num": 24, "name": "Ziggs abeille", "chromas": true },
+        {
+          "id": "115033",
+          "num": 33,
+          "name": "Ziggs La Ilusión",
+          "chromas": true
+        }
       ],
       "lore": "Amoureux des grosses bombes et des mèches courtes, le yordle Ziggs est une force de la nature explosive. Assistant d'un inventeur de Piltover, il finit par se lasser de sa vie routinière et devint l'ami d'une jeune fille imprévisible et portée sur les explosifs, Jinx. Après une folle nuit en ville, Ziggs suivit les conseils de Jinx et s'installa à Zaun, où il se livre désormais à sa passion plus librement, terrorisant les Barons de la chimie comme les simples citoyens dans sa quête éternelle pour faire sauter tout ce qui traverse son champ de vision.",
       "blurb": "Amoureux des grosses bombes et des mèches courtes, le yordle Ziggs est une force de la nature explosive. Assistant d'un inventeur de Piltover, il finit par se lasser de sa vie routinière et devint l'ami d'une jeune fille imprévisible et portée sur les...",
@@ -59567,7 +59690,7 @@
             [850, 850, 850, 850, 850],
             [325, 325, 325, 325, 325],
             [225, 225, 225, 225, 225],
-            [150, 150, 150, 150, 150],
+            [180, 180, 180, 180, 180],
             [240, 240, 240, 240, 240],
             [70, 70, 70, 70, 70],
             [0, 0, 0, 0, 0],
@@ -59580,7 +59703,7 @@
             "850",
             "325",
             "225",
-            "150",
+            "180",
             "240",
             "70",
             "0",

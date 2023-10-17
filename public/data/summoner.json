@@ -1,6 +1,6 @@
 {
   "type": "summoner",
-  "version": "13.18.1",
+  "version": "13.20.1",
   "data": {
     "SummonerBarrier": {
       "id": "SummonerBarrier",
@@ -521,8 +521,8 @@
     "SummonerSmite": {
       "id": "SummonerSmite",
       "name": "Châtiment",
-      "description": "Vous infligez 600-1200 pts de dégâts bruts au monstre ou au sbire ciblé.",
-      "tooltip": "Vous infligez <trueDamage>{{ f1 }} pts de dégâts bruts</trueDamage> au monstre ou au sbire ciblé.<br />Vous infligez <trueDamage>{{ petdamage }} pts de dégâts bruts</trueDamage> aux familiers de champions.",
+      "description": "Vous infligez 600-1200 pts de dégâts bruts au monstre ciblé.",
+      "tooltip": "Vous infligez <trueDamage>{{ smitebasedamage }} pts de dégâts bruts</trueDamage> au monstre ou au sbire ciblé.<br /><br />Vous infligez <trueDamage>{{ firstpvpdamage }} pts de dégâts bruts</trueDamage> aux familiers de champions.<br /><br /><rules>Ne peut pas être lancé sur les petits monstres.</rules>",
       "maxrank": 1,
       "cooldown": [15],
       "cooldownBurn": "15",
@@ -626,7 +626,7 @@
     "SummonerTeleport": {
       "id": "SummonerTeleport",
       "name": "Téléportation",
-      "description": "Après 4 sec de canalisation, votre champion est téléporté près du bâtiment allié ciblé. S'améliore en Téléportation débridée au bout de 14 min, ce qui permet de téléporter votre champion près de la balise, du bâtiment ou du sbire allié ciblé.",
+      "description": "Après 4 sec de canalisation, votre champion est téléporté près du bâtiment allié ciblé. S'améliore en Téléportation débridée au bout de 10 min, ce qui permet de téléporter votre champion près de la balise, du bâtiment ou du sbire allié ciblé.",
       "tooltip": "Après {{ channelduration }} sec de canalisation, votre champion est téléporté près du bâtiment allié ciblé.<br /><br />S'améliore en Téléportation débridée au bout de 10 min. Téléportation débridée a un délai de récupération de {{ upgradedcooldown }} sec, peut être utilisée sur les bâtiments, les sbires et les balises alliés et octroie +{{ msamount*100 }}% de vitesse de déplacement pendant {{ msduration }} sec.",
       "maxrank": 1,
       "cooldown": [360],
