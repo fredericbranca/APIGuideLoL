@@ -15,59 +15,58 @@ class DataImportController extends AbstractController
     // Route pour importer les champions dans la base de données
     #[Route('/import-champion', name: 'import_champion')]
     public function importDataChampion(DocumentManager $dm)
-    { {
-            $json = file_get_contents('data/championFull.json');
-            $data = json_decode($json, true)['data'];
+    {
+        // Supprimer toutes les entrées existantes de la table des champions
+        $dm->createQueryBuilder(Champion::class)
+            ->remove()
+            ->getQuery()
+            ->execute();
 
-            foreach ($data as $id => $championData) {
-                // Recherche du champion par son ID
-                $champion = $dm->getRepository(Champion::class)->findOneBy(['id' => $id]);
+        $json = file_get_contents('data/championFull.json');
+        $data = json_decode($json, true)['data'];
 
-                // Création du champion s'il n'existe pas encore
-                if (!$champion) {
-                    $champion = new Champion;
-                    $champion->setId($id);
-                    $dm->persist($champion);
-                }
+        foreach ($data as $id => $championData) {
+            $champion = new Champion();
+            $champion->setId($id);
+            $champion->setIdChamp($championData['id']);
+            $champion->setKey($championData['key']);
+            $champion->setName($championData['name']);
+            $champion->setTitle($championData['title']);
+            $champion->setImage($championData['image']['full']);
+            $champion->setSkins($championData['skins']);
+            $champion->setLore($championData['lore']);
+            $champion->setBlurb($championData['blurb']);
+            $champion->setTags($championData['tags']);
+            $champion->setPartype($championData['partype']);
+            $champion->setSpells($championData['spells']);
+            $champion->setPassive($championData['passive']);
 
-                $champion->setIdChamp($championData['id']);
-                $champion->setKey($championData['key']);
-                $champion->setName($championData['name']);
-                $champion->setTitle($championData['title']);
-                $champion->setImage($championData['image']['full']);
-                $champion->setSkins($championData['skins']);
-                $champion->setLore($championData['lore']);
-                $champion->setBlurb($championData['blurb']);
-                $champion->setTags($championData['tags']);
-                $champion->setPartype($championData['partype']);
-                $champion->setSpells($championData['spells']);
-                $champion->setPassive($championData['passive']);
-            }
-
-            $dm->flush();
-
-            return new Response('Champions importés ou mise à jour avec succès !');
+            $dm->persist($champion);
         }
+
+        $dm->flush();
+
+        return new Response('Champions importés avec succès !');
     }
 
     // Route pour importer les runes
     #[Route('/import-rune', name: 'import_rune')]
-    public function importData(DocumentManager $dm)
+    public function importDataRune(DocumentManager $dm)
     {
+        // Supprimer toutes les entrées existantes de la table des runes
+        $dm->createQueryBuilder(Rune::class)
+            ->remove()
+            ->getQuery()
+            ->execute();
+
         $json = file_get_contents('data/runesReforged.json');
         $data = json_decode($json, true);
 
-        foreach ($data as $id => $runeData) {
-            // Recherche de la rune par son ID
-            $rune = $dm->getRepository(Rune::class)->findOneBy(['id' => $id]);
+        foreach ($data as $runeData) {
+            $rune = new Rune();
 
-            // Création de la rune si elle n'existe pas encore
-            if (!$rune) {
-                $rune = new Rune;
-                $rune->setId($runeData['key']);
-                $dm->persist($rune);
-            }
-
+            // Assumons que l'ID de la rune est 'key'
+            $rune->setId($runeData['key']);
             $rune->setIdRune($runeData['id']);
             $rune->setKey($runeData['key']);
             $rune->setIcon($runeData['icon']);
@@ -81,31 +80,33 @@ class DataImportController extends AbstractController
             }
 
             $rune->setSlots($slots);
+
+            $dm->persist($rune);
         }
 
         $dm->flush();
 
-        return new Response('Runes importées ou mise à jour avec succès !');
+        return new Response('Runes importées avec succès !');
     }
 
     // Route pour importer les sorts d'invocateur
     #[Route('/import-summoner', name: 'import_summoner')]
     public function importSummonerSpells(DocumentManager $dm)
     {
+        // Supprimer toutes les entrées existantes de la table des sorts d'invocateur
+        $dm->createQueryBuilder(SortInvocateur::class)
+            ->remove()
+            ->getQuery()
+            ->execute();
+
         $json = file_get_contents('data/summoner.json');
         $data = json_decode($json, true)['data'];
 
-        foreach ($data as $id => $spellData) {
-            // Recherche du sort d'invocateur par son ID
-            $spell = $dm->getRepository(SortInvocateur::class)->findOneBy(['id' => $id]);
+        foreach ($data as $spellData) {
+            $spell = new SortInvocateur();
 
-            // Création du sort d'invocateur s'il n'existe pas encore
-            if (!$spell) {
-                $spell = new SortInvocateur;
-                $spell->setId($spellData['id']);
-                $dm->persist($spell);
-            }
-
+            // Assumons que l'ID du sort est 'id'
+            $spell->setId($spellData['id']);
             $spell->setIdSort($spellData['id']);
             $spell->setName($spellData['name']);
             $spell->setDescription($spellData['description']);
@@ -113,10 +114,12 @@ class DataImportController extends AbstractController
             $spell->setModes($spellData['modes']);
             $spell->setRange($spellData['rangeBurn']);
             $spell->setImage($spellData['image']['full']);
+
+            $dm->persist($spell);
         }
 
         $dm->flush();
 
-        return new Response('Sorts d\'invocateur importés ou mis à jour avec succès !');
+        return new Response('Sorts d\'invocateur importés avec succès !');
     }
 }
