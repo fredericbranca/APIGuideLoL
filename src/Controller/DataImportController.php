@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Document\Item;
 use App\Document\Rune;
 use App\Document\Champion;
 use App\Document\SortInvocateur;
@@ -121,5 +122,35 @@ class DataImportController extends AbstractController
         $dm->flush();
 
         return new Response('Sorts d\'invocateur importés avec succès !');
+    }
+
+    // Route pour importer les items dans la base de données
+    #[Route('/import-item', name: 'import_item')]
+    public function importDataItem(DocumentManager $dm)
+    {
+        // Supprimer toutes les entrées existantes de la table des items
+        $dm->createQueryBuilder(Item::class)
+            ->remove()
+            ->getQuery()
+            ->execute();
+
+        $json = file_get_contents('data/item.json');
+        $data = json_decode($json, true)['data'];
+
+        foreach ($data as $id => $itemData) {
+            $item = new Item();
+            $item->setId($id);
+            $item->setName($itemData['name']);
+            $item->setDescription($itemData['description']);
+            $item->setImage($itemData['image']['full']);
+            $item->setGold($itemData['gold']);
+            $item->setTags($itemData['tags']);
+
+            $dm->persist($item);
+        }
+
+        $dm->flush();
+
+        return new Response('Items importés avec succès !');
     }
 }
