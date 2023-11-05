@@ -2,8 +2,9 @@
 
 namespace App\Document;
 
-use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
+use App\Resolver\ChampionResolver;
+use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\GraphQl\Query;
 use ApiPlatform\Metadata\GraphQl\QueryCollection;
@@ -14,8 +15,16 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
  */
 #[ApiResource(
     graphQlOperations: [
-        new Query(),
-        new QueryCollection()
+        new Query(
+            resolver: ChampionResolver::class,
+            args: [
+                'idChamp' => [
+                    'type' => 'String!',
+                    'description' => 'The ID of the entity.',
+                ],
+            ]
+        ),
+        new QueryCollection(),
     ],
     operations: [
         new Get(),
@@ -78,7 +87,7 @@ class Champion
      * @MongoDB\Field(type="string")
      */
     private $partype;
-    
+
     /**
      * @MongoDB\Field(type="hash")
      */
