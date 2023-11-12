@@ -1,7 +1,7 @@
 {
   "type": "champion",
   "format": "full",
-  "version": "13.20.1",
+  "version": "13.22.1",
   "data": {
     "Aatrox": {
       "id": "Aatrox",
@@ -515,7 +515,7 @@
         "critperlevel": 0,
         "attackdamage": 53,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 2,
+        "attackspeedperlevel": 2.2,
         "attackspeed": 0.668
       },
       "spells": [
@@ -2387,7 +2387,7 @@
         "attackdamage": 51,
         "attackdamageperlevel": 3.2,
         "attackspeedperlevel": 1.68,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -2770,7 +2770,7 @@
         "attackdamage": 50,
         "attackdamageperlevel": 2.65,
         "attackspeedperlevel": 1.36,
-        "attackspeed": 0.579
+        "attackspeed": 0.61
       },
       "spells": [
         {
@@ -3078,6 +3078,12 @@
           "id": "523020",
           "num": 20,
           "name": "Aphelios fleur spirituelle",
+          "chromas": false
+        },
+        {
+          "id": "523030",
+          "num": 30,
+          "name": "HEARTSTEEL Aphelios",
           "chromas": false
         }
       ],
@@ -4085,7 +4091,7 @@
         "name": "Créateur cosmique",
         "description": "Les compétences d'Aurelion Sol qui blessent des ennemis lui octroient de la <font color='#3458eb'>poussière d'étoile</font>, laquelle améliore définitivement chacune de ses compétences. ",
         "image": {
-          "full": "AurelionSolP.ASolGU.png",
+          "full": "AurelionSolP.png",
           "sprite": "passive0.png",
           "group": "passive",
           "x": 0,
@@ -4997,8 +5003,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [24, 22.5, 21, 19.5, 18],
-          "cooldownBurn": "24/22.5/21/19.5/18",
+          "cooldown": [20, 19, 18, 17, 16],
+          "cooldownBurn": "20/19/18/17/16",
           "cost": [0, 0, 0, 0, 0],
           "costBurn": "0",
           "datavalues": {},
@@ -5607,13 +5613,13 @@
       "partype": "Mana",
       "info": { "attack": 2, "defense": 2, "magic": 9, "difficulty": 4 },
       "stats": {
-        "hp": 590,
-        "hpperlevel": 102,
+        "hp": 570,
+        "hpperlevel": 105,
         "mp": 469,
         "mpperlevel": 21,
         "movespeed": 340,
-        "armor": 22,
-        "armorperlevel": 4.7,
+        "armor": 27,
+        "armorperlevel": 4.2,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 550,
@@ -5625,8 +5631,8 @@
         "critperlevel": 0,
         "attackdamage": 57,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 1.36,
-        "attackspeed": 0.625
+        "attackspeedperlevel": 2,
+        "attackspeed": 0.681
       },
       "spells": [
         {
@@ -5758,7 +5764,7 @@
           "id": "BrandE",
           "name": "Conflagration",
           "description": "Brand provoque sur sa cible une puissante explosion qui se propage vers les ennemis proches, infligeant des dégâts magiques. Si la cible est en flammes, la portée de la dispersion de Conflagration est doublée.",
-          "tooltip": "Brand provoque une puissante explosion sur sa cible, infligeant <magicDamage>{{ explosiondamage }} pts de dégâts magiques</magicDamage> aux unités proches.<br /><br />Si la cible est <keywordMajor>en flammes</keywordMajor>, la portée de la dispersion est doublée.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Brand provoque une puissante explosion sur sa cible, infligeant <magicDamage>{{ edamagecalc }} pts de dégâts magiques</magicDamage> aux unités proches.<br /><br />Si la cible est <keywordMajor>en flammes</keywordMajor>, la portée de la dispersion est doublée.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts",
@@ -5766,7 +5772,7 @@
               "Coût en @AbilityResourceName@"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ cost }} -> {{ costNL }}"
             ]
@@ -5779,7 +5785,7 @@
           "datavalues": {},
           "effect": [
             null,
-            [70, 95, 120, 145, 170],
+            [0, 0, 0, 0, 0],
             [375, 375, 375, 375, 375],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -5792,7 +5798,7 @@
           ],
           "effectBurn": [
             null,
-            "70/95/120/145/170",
+            "0",
             "375",
             "0",
             "0",
@@ -6056,7 +6062,7 @@
           "id": "BraumW",
           "name": "Bouclier humain",
           "description": "Braum bondit vers le champion ou le sbire allié ciblé. À l'arrivée, Braum et l'allié gagnent de l'armure et de la résistance magique pendant quelques secondes.",
-          "tooltip": "Braum bondit vers un champion ou un sbire allié. À l'arrivée, Braum octroie à la cible <scaleArmor>+{{ grantedallyarmor }} armure</scaleArmor> et <scaleMR>+{{ grantedallymr }} résistance magique</scaleMR> pendant {{ e1 }} sec. Braum s'octroie <scaleArmor>+{{ grantedbraumarmor }}</scaleArmor> armure et <scaleMR>+{{ grantedbraummr }}</scaleMR> résistance magique pendant la même durée.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Braum bondit vers un champion ou un sbire allié. À l'arrivée, Braum octroie à la cible <scaleArmor>+{{ grantedallyarmor }} armure</scaleArmor> et <scaleMR>+{{ grantedallymr }} résistance magique</scaleMR> pendant {{ e1 }} sec. Braum s'octroie <scaleArmor>+{{ grantedbraumarmor }} armure</scaleArmor> et <scaleMR>+{{ grantedbraummr }} résistance magique</scaleMR> pendant la même durée.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Résistances de base", "Délai de récupération"],
             "effect": [
@@ -6311,7 +6317,7 @@
         "critperlevel": 0,
         "attackdamage": 60,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 2.3,
+        "attackspeedperlevel": 2,
         "attackspeed": 0.644
       },
       "spells": [
@@ -6380,7 +6386,7 @@
           "id": "BriarW",
           "name": "Folie sanguinaire / Juste un croc",
           "description": "Briar bondit en avant et fait éclater son pilori. Elle succombe à la Folie sanguinaire et poursuit sans relâche l'ennemi le plus proche (en priorisant les champions). Sous l'effet de la frénésie, ses vitesses de déplacement et d'attaque augmentent et ses attaques infligent des dégâts de zone autour de sa cible.<br><br>Briar peut réactiver la compétence pour prendre un CROC sur sa cible à sa prochaine attaque, ce qui inflige des dégâts supplémentaires en fonction des PV manquants et soigne Briar proportionnellement aux dégâts qu'elle inflige.",
-          "tooltip": "Briar bondit et entre dans une <keywordMajor>Folie sanguinaire</keywordMajor>. Elle applique une provocation sur elle-même contre l'ennemi le plus proche pendant {{ berserkduration }} sec, en priorisant les champions. Tant qu'elle est dans une <keywordMajor>Folie sanguinaire</keywordMajor>, elle gagne <attackSpeed>+{{ berserkas*100 }}% de vitesse d'attaque</attackSpeed> et <speed>+{{ berserkms*100 }}% de vitesse de déplacement</speed>, et ses attaques infligent <physicalDamage>{{ totalaoedamage }} pts de dégâts physiques</physicalDamage> aux ennemis autour de sa cible.<br /><br />Briar peut <recast>relancer</recast> cette compétence pour renforcer sa prochaine attaque. Cela inflige <physicalDamage>{{ totalattackbonusdamage }} + {{ totalattackpercentmissinghealth }} des PV manquants en dégâts physiques</physicalDamage> et <healing>rend à Briar des PV équivalents à {{ attackhealpercent*100 }}% des dégâts infligés</healing>.<br />{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Briar bondit et entre dans une <keywordMajor>Folie sanguinaire</keywordMajor>. Elle applique une provocation sur elle-même contre l'ennemi le plus proche pendant {{ berserkduration }} sec, en priorisant les champions. Tant qu'elle est dans une <keywordMajor>Folie sanguinaire</keywordMajor>, elle gagne <attackSpeed>+{{ berserkas*100 }}% de vitesse d'attaque</attackSpeed> et <speed>+{{ berserkms*100 }}% de vitesse de déplacement</speed>, et ses attaques infligent <physicalDamage>{{ totalaoedamage }} pts de dégâts physiques</physicalDamage> aux ennemis autour de sa cible.<br /><br />Briar peut <recast>relancer</recast> cette compétence pour renforcer sa prochaine attaque. Cela inflige <physicalDamage>{{ totalattackbonusdamage }} + {{ totalattackpercentmissinghealth }}% des PV manquants en dégâts physiques</physicalDamage> et <healing>rend à Briar des PV équivalents à {{ attackhealpercent*100 }}% des dégâts infligés</healing>.<br />{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Vitesse d'attaque",
@@ -6929,15 +6935,12 @@
           "description": "Caitlyn prend son temps pour réaliser le tir parfait, infligeant d'importants dégâts à une cible unique et à très longue portée. Les champions ennemis peuvent intercepter la balle à la place de leur allié.",
           "tooltip": "Caitlyn prend le temps de canaliser un tir parfait, puis elle fait feu, infligeant <physicalDamage>{{ rtotaldamage }} pts de dégâts physiques</physicalDamage>. Les autres champions ennemis peuvent intercepter le tir. Cette compétence octroie une <keywordStealth>vision pure</keywordStealth> de la cible pendant la canalisation.<br /><br /><rules>Inflige jusqu'à {{ critchanceamp*100 }}% de dégâts supplémentaires selon les chances de coup critique de Caitlyn.</rules>{{ spellmodifierdescriptionappend }}",
           "leveltip": {
-            "label": ["Dégâts", "Délai de récupération"],
-            "effect": [
-              "{{ rbasedamage }} -> {{ rbasedamageNL }}",
-              "{{ cooldown }} -> {{ cooldownNL }}"
-            ]
+            "label": ["Dégâts"],
+            "effect": ["{{ rbasedamage }} -> {{ rbasedamageNL }}"]
           },
           "maxrank": 3,
-          "cooldown": [90, 75, 60],
-          "cooldownBurn": "90/75/60",
+          "cooldown": [90, 90, 90],
+          "cooldownBurn": "90",
           "cost": [100, 100, 100],
           "costBurn": "100",
           "datavalues": {},
@@ -10013,6 +10016,12 @@
           "num": 46,
           "name": "Ekko gardien des étoiles prestige",
           "chromas": false
+        },
+        {
+          "id": "245056",
+          "num": 56,
+          "name": "Breakout True Damage Ekko",
+          "chromas": false
         }
       ],
       "lore": "Jeune prodige des rues malfamées de Zaun, Ekko manipule le temps pour renverser toute situation dangereuse à son avantage. En utilisant sa propre invention, la clepsydre-zéro, il explore les différents possibles de la réalité pour surmonter les difficultés. Bien qu'il aime sa liberté, lorsque ses amis sont menacés, il est prêt à tout pour les défendre. Pour quiconque ne le connaît pas, Ekko semble toujours accomplir l'impossible, et du premier coup.",
@@ -11191,6 +11200,12 @@
           "num": 33,
           "name": "Ezreal de la cour féérique",
           "chromas": false
+        },
+        {
+          "id": "81043",
+          "num": 43,
+          "name": "HEARTSTEEL Ezreal",
+          "chromas": false
         }
       ],
       "lore": "Aventurier audacieux, doué sans le savoir pour les arts magiques, Ezreal poursuit ses expéditions dans les catacombes oubliées, se bat avec d'antiques malédictions et contourne avec aisance les obstacles les plus impossibles. Son courage et son panache sont sans borne, et il préfère improviser son salut dans les situations critiques, avec pour armes principales sa vivacité d'esprit et son gantelet mystique shurimien, qu'il utilise pour déchaîner de puissants projectiles arcaniques. Une chose est sûre : quand Ezreal est dans les parages, les problèmes ne sont pas loin. Et ils sont partout. Absolument partout.",
@@ -11993,7 +12008,7 @@
           "id": "FioraQ",
           "name": "Fente",
           "description": "Fiora se fend dans une direction et frappe un ennemi proche, infligeant des dégâts physiques et appliquant ses effets à l'impact.",
-          "tooltip": "Fiora se fend dans une direction et frappe l'ennemi, la balise ou le bâtiment le plus proche, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage>. Ce coup vise en priorité les <keywordMajor>points faibles</keywordMajor> et les ennemis qu'il peut tuer.<br /><br />Si Fiora touche un ennemi, le délai de récupération de cette compétence est réduit de {{ e4 }}%.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Fiora se fend dans une direction et frappe l'ennemi, la balise ou le bâtiment le plus proche, infligeant <physicalDamage>{{ totaldamage }} pts de dégâts physiques</physicalDamage>. Ce coup vise en priorité les <keywordMajor>points faibles</keywordMajor> et les ennemis qu'il peut tuer.<br /><br />Si Fiora touche un ennemi, le délai de récupération de cette compétence est réduit de {{ cdrefundpercent*100 }}%.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts",
@@ -12002,8 +12017,8 @@
               "Coût en @AbilityResourceName@"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
-              "{{ e2 }} -> {{ e2NL }}",
+              "{{ damage }} -> {{ damageNL }}",
+              "{{ badratio*100.000000 }}% -> {{ badrationl*100.000000 }}%",
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ cost }} -> {{ costNL }}"
             ]
@@ -12016,26 +12031,26 @@
           "datavalues": {},
           "effect": [
             null,
-            [70, 80, 90, 100, 110],
-            [0.9, 0.95, 1, 1.05, 1.1],
-            [50, 50, 50, 50, 50],
-            [50, 50, 50, 50, 50],
-            [2.5, 2.5, 2.5, 2.5, 2.5],
-            [2, 2, 2, 2, 2],
-            [90, 120, 150, 180, 210],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0]
           ],
           "effectBurn": [
             null,
-            "70/80/90/100/110",
-            "0.9/0.95/1/1.05/1.1",
-            "50",
-            "50",
-            "2.5",
-            "2",
-            "90/120/150/180/210",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0"
@@ -12060,11 +12075,11 @@
           "id": "FioraW",
           "name": "Riposte",
           "description": "Fiora pare tous les dégâts et toutes les entraves qui la ciblent pendant un court instant, après quoi elle donne un coup d'estoc dans une direction. Ce coup d'estoc ralentit le premier champion ennemi touché. Si Fiora a paré un effet immobilisant, elle étourdit le premier champion ennemi touché.",
-          "tooltip": "Fiora pare tous les dégâts, toutes les entraves et tous les effets négatifs qui la ciblent pendant {{ e2 }} sec, après quoi elle donne un coup d'estoc. Ce coup d'estoc inflige <magicDamage>{{ stabdamage }} pts de dégâts magiques</magicDamage> au premier champion touché et <status>ralentit</status> de {{ e4 }}% la <speed>vitesse de déplacement</speed> et la <attackSpeed>vitesse d'attaque</attackSpeed> de cet ennemi pendant {{ e3 }} sec. Si Fiora pare un effet <status>immobilisant</status>, l'ennemi touché est <status>étourdi</status> plutôt que <status>ralenti</status>.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Fiora pare tous les dégâts, toutes les entraves et tous les effets négatifs qui la ciblent pendant {{ parryduration }} sec, après quoi elle donne un coup d'estoc. Ce coup d'estoc inflige <magicDamage>{{ stabdamage }} pts de dégâts magiques</magicDamage> au premier champion touché et <status>ralentit</status> de {{ asmsslowpercent*-100 }}% la <speed>vitesse de déplacement</speed> et la <attackSpeed>vitesse d'attaque</attackSpeed> de cet ennemi pendant {{ ccduration }} sec. Si Fiora pare un effet <status>immobilisant</status>, l'ennemi touché est <status>étourdi</status> plutôt que <status>ralenti</status>.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -12076,26 +12091,26 @@
           "datavalues": {},
           "effect": [
             null,
-            [110, 150, 190, 230, 270],
-            [0.75, 0.75, 0.75, 0.75, 0.75],
-            [2, 2, 2, 2, 2],
-            [50, 50, 50, 50, 50],
-            [0.03, 0.03, 0.03, 0.03, 0.03],
-            [0.15, 0.15, 0.15, 0.15, 0.25],
-            [24, 22, 20, 18, 16],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0]
           ],
           "effectBurn": [
             null,
-            "110/150/190/230/270",
-            "0.75",
-            "2",
-            "50",
-            "0.03",
-            "0.15/0.15/0.15/0.15/0.25",
-            "24/22/20/18/16",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0"
@@ -12120,7 +12135,7 @@
           "id": "FioraE",
           "name": "Botte secrète",
           "description": "Fiora augmente sa vitesse d'attaque pour ses deux prochaines attaques. La première attaque ralentit la cible et la seconde inflige un coup critique.",
-          "tooltip": "Fiora gagne <attackSpeed>+{{ e4 }}% de vitesse d'attaque</attackSpeed> pour ses deux prochaines attaques. La première attaque <status>ralentit</status> de {{ e3 }}% pendant {{ e2 }} sec. La seconde attaque est toujours un coup critique qui inflige <physicalDamage>{{ f4 }}% de dégâts</physicalDamage>.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Fiora gagne <attackSpeed>+{{ aspercent*100 }}% de vitesse d'attaque</attackSpeed> pour ses deux prochaines attaques. La première attaque <status>ralentit</status> de {{ slowpercent*-100 }}% pendant {{ slowduration }} sec. La seconde attaque est toujours un coup critique qui inflige <physicalDamage>{{ attacktwopercenttad*100 }}% de dégâts</physicalDamage>.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts critiques",
@@ -12128,9 +12143,9 @@
               "Vitesse d'attaque"
             ],
             "effect": [
-              "{{ e6 }}% -> {{ e6NL }}%",
+              "{{ attacktwopercenttad*100.000000 }}% -> {{ attacktwopercenttadnl*100.000000 }}%",
               "{{ cooldown }} -> {{ cooldownNL }}",
-              "{{ e4 }}% -> {{ e4NL }}%"
+              "{{ aspercent*100.000000 }}% -> {{ aspercentnl*100.000000 }}%"
             ]
           },
           "maxrank": 5,
@@ -12141,29 +12156,29 @@
           "datavalues": {},
           "effect": [
             null,
-            [3, 3, 3, 3, 3],
-            [1, 1, 1, 1, 1],
-            [30, 30, 30, 30, 30],
-            [50, 60, 70, 80, 90],
-            [100, 100, 100, 100, 100],
-            [160, 170, 180, 190, 200],
-            [5, 10, 15, 20, 25],
-            [40, 50, 60, 70, 80],
-            [10, 12.5, 15, 17.5, 20],
-            [20, 20, 20, 20, 20]
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0]
           ],
           "effectBurn": [
             null,
-            "3",
-            "1",
-            "30",
-            "50/60/70/80/90",
-            "100",
-            "160/170/180/190/200",
-            "5/10/15/20/25",
-            "40/50/60/70/80",
-            "10/12.5/15/17.5/20",
-            "20"
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
           ],
           "vars": [],
           "costType": " {{ abilityresourcename }}",
@@ -12185,7 +12200,7 @@
           "id": "FioraR",
           "name": "Défi suprême",
           "description": "Fiora révèle les quatre points faibles d'un champion ennemi et augmente sa vitesse de déplacement à proximité de ce champion. Si Fiora frappe les quatre points faibles ou si l'adversaire meurt après qu'elle en a frappé au moins un, Fiora et ses alliés dans la zone sont soignés pendant quelques secondes.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> le bonus en <speed>vitesse de déplacement</speed> de <spellName>Danse de la duelliste</spellName> est augmenté à {{ percentms }}%.<br /><br /><spellActive>Active :</spellActive> Fiora révèle les quatre <keywordMajor>points faibles</keywordMajor> d'un champion, ce qui lui permet d'infliger un maximum de <trueDamage>{{ spell.fiorapassive:rdamagetotal }} des PV max en dégâts bruts</trueDamage>. Elle gagne aussi la <speed>vitesse de déplacement</speed> de <spellName>Danse de la duelliste</spellName> tant qu'elle est proche de la cible.<br /><br />Si Fiora frappe les quatre <keywordMajor>points faibles</keywordMajor> en moins de {{ markduration }} sec ou si la cible meurt après qu'elle en a frappé au moins un, Fiora et les champions alliés proches récupèrent <healing>{{ healpersecondcalc }} PV par seconde</healing> pendant {{ minhealduration }} à {{ healduration }} sec, selon le nombre de <keywordMajor>points faibles</keywordMajor> touchés.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "<spellPassive>Passive :</spellPassive> le bonus en <speed>vitesse de déplacement</speed> de <spellName>Danse de la duelliste</spellName> est augmenté à {{ percentms*100 }}%.<br /><br /><spellActive>Active :</spellActive> Fiora révèle les quatre <keywordMajor>points faibles</keywordMajor> d'un champion, ce qui lui permet d'infliger un maximum de <trueDamage>{{ spell.fiorapassive:rdamagetotal }} des PV max en dégâts bruts</trueDamage>. Elle gagne aussi la <speed>vitesse de déplacement</speed> de <spellName>Danse de la duelliste</spellName> tant qu'elle est proche de la cible.<br /><br />Si Fiora frappe les quatre <keywordMajor>points faibles</keywordMajor> en moins de {{ markduration }} sec ou si la cible meurt après qu'elle en a frappé au moins un, Fiora et les champions alliés proches récupèrent <healing>{{ healpersecondcalc }} PV par seconde</healing> pendant {{ minhealduration }} à {{ healduration }} sec, selon le nombre de <keywordMajor>points faibles</keywordMajor> touchés.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Délai de récupération",
@@ -12194,8 +12209,8 @@
             ],
             "effect": [
               "{{ cooldown }} -> {{ cooldownNL }}",
-              "{{ e2 }}% -> {{ e2NL }}%",
-              "{{ e7 }} -> {{ e7NL }}"
+              "{{ percentms*100.000000 }}% -> {{ percentmsnl*100.000000 }}%",
+              "{{ healpersecond }} -> {{ healpersecondNL }}"
             ]
           },
           "maxrank": 3,
@@ -12206,29 +12221,29 @@
           "datavalues": {},
           "effect": [
             null,
-            [8, 8, 8],
-            [30, 40, 50],
             [0, 0, 0],
-            [30, 45, 60],
-            [500, 500, 500],
-            [5, 5, 5],
-            [75, 110, 125],
-            [550, 550, 550],
-            [2, 2, 2],
-            [1, 1, 1]
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
           ],
           "effectBurn": [
             null,
-            "8",
-            "30/40/50",
             "0",
-            "30/45/60",
-            "500",
-            "5",
-            "75/110/125",
-            "550",
-            "2",
-            "1"
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
           ],
           "vars": [],
           "costType": " {{ abilityresourcename }}",
@@ -14386,11 +14401,11 @@
           "id": "GragasE",
           "name": "Coup de bidon",
           "description": "Gragas charge vers une zone ciblée et percute le premier ennemi rencontré, infligeant des dégâts à tous les ennemis proches et les étourdissant.",
-          "tooltip": "Gragas se rue en avant, percutant le premier ennemi rencontré, <status>projetant dans les airs</status> les ennemis proches pendant {{ e2 }} sec et leur infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>.<br /><br />Le délai de récupération de cette compétence est réduit de {{ f1 }} sec si Gragas percute un ennemi.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Gragas se rue en avant, percutant le premier ennemi rencontré, <status>projetant dans les airs</status> les ennemis proches pendant {{ stunduration }} sec et leur infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>.<br /><br />Le délai de récupération de cette compétence est réduit de {{ cooldownrefund*100 }}% si Gragas percute un ennemi.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
@@ -14402,7 +14417,7 @@
           "datavalues": {},
           "effect": [
             null,
-            [80, 125, 170, 215, 260],
+            [0, 0, 0, 0, 0],
             [1, 1, 1, 1, 1],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -14415,7 +14430,7 @@
           ],
           "effectBurn": [
             null,
-            "80/125/170/215/260",
+            "0",
             "1",
             "0",
             "0",
@@ -14462,8 +14477,8 @@
           "datavalues": {},
           "effect": [
             null,
-            [200, 300, 400],
-            [900, 900, 900],
+            [0, 0, 0],
+            [0, 0, 0],
             [0, 0, 0],
             [0, 0, 0],
             [0, 0, 0],
@@ -14475,8 +14490,8 @@
           ],
           "effectBurn": [
             null,
-            "200/300/400",
-            "900",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -14789,7 +14804,7 @@
             [4, 4, 4, 4, 4],
             [20, 25, 30, 35, 40],
             [0.5, 0.5, 0.5, 0.5, 0.5],
-            [4, 7, 10, 13, 16],
+            [2, 5, 8, 11, 14],
             [750, 750, 750, 750, 750],
             [375, 375, 375, 375, 375],
             [275, 275, 275, 275, 275],
@@ -14802,7 +14817,7 @@
             "4",
             "20/25/30/35/40",
             "0.5",
-            "4/7/10/13/16",
+            "2/5/8/11/14",
             "750",
             "375",
             "275",
@@ -15358,7 +15373,7 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 66,
-        "attackdamageperlevel": 3.2,
+        "attackdamageperlevel": 3.7,
         "attackspeedperlevel": 2.5,
         "attackspeed": 0.67
       },
@@ -15722,7 +15737,7 @@
         "attackdamage": 56,
         "attackdamageperlevel": 2.7,
         "attackspeedperlevel": 1.36,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -17186,23 +17201,23 @@
       "info": { "attack": 3, "defense": 5, "magic": 7, "difficulty": 7 },
       "stats": {
         "hp": 570,
-        "hpperlevel": 84,
-        "mp": 350,
-        "mpperlevel": 64,
+        "hpperlevel": 90,
+        "mp": 360,
+        "mpperlevel": 50,
         "movespeed": 325,
         "armor": 28,
-        "armorperlevel": 5,
+        "armorperlevel": 4.5,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
-        "attackrange": 500,
+        "attackrange": 550,
         "hpregen": 5.5,
         "hpregenperlevel": 0.55,
         "mpregen": 11.5,
         "mpregenperlevel": 0.4,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 52,
-        "attackdamageperlevel": 3,
+        "attackdamage": 47,
+        "attackdamageperlevel": 2.5,
         "attackspeedperlevel": 3,
         "attackspeed": 0.625
       },
@@ -17211,7 +17226,7 @@
           "id": "HowlingGale",
           "name": "Vent hurlant",
           "description": "En modifiant localement la pression et la température, Janna peut créer une petite tornade qui croît en taille avec le temps. Elle peut activer une nouvelle fois le sort pour libérer la tornade. Elle fonce alors dans la direction de l'invocation, projetant en l'air les ennemis sur son passage et leur infligeant des dégâts.",
-          "tooltip": "Janna invoque une tornade qui gagne en puissance en {{ e6 }} sec, puis l'envoie dans une direction. La tornade inflige <magicDamage>{{ minimumdamage }} pts de dégâts magiques</magicDamage> et <status>projette dans les airs</status> pendant {{ e4 }} sec. La distance, les dégâts et la durée de <status>projection dans les airs</status> augmentent avec le temps de charge de la tornade. Janna peut <recast>réactiver</recast> cette compétence pour envoyer la tornade plus tôt.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Janna invoque une tornade qui gagne en puissance en {{ maxduration }} sec, puis l'envoie dans une direction. La tornade inflige <magicDamage>{{ minimumdamage }} - {{ maxdamage }} pts de dégâts magiques</magicDamage> et <status>projette dans les airs</status> pendant {{ baseknockup }} - {{ maxknockup }} sec. La distance, les dégâts et la durée de <status>projection dans les airs</status> augmentent avec le temps de charge de la tornade. Janna peut <recast>réactiver</recast> cette compétence pour envoyer la tornade plus tôt.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts",
@@ -17219,48 +17234,48 @@
               "Coût en @AbilityResourceName@"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
-              "{{ e2 }} -> {{ e2NL }}",
+              "{{ mindamage }} -> {{ mindamageNL }}",
+              "{{ bonusdamage }} -> {{ bonusdamageNL }}",
               "{{ cost }} -> {{ costNL }}"
             ]
           },
           "maxrank": 5,
-          "cooldown": [12, 12, 12, 12, 12],
-          "cooldownBurn": "12",
-          "cost": [60, 70, 80, 90, 100],
-          "costBurn": "60/70/80/90/100",
+          "cooldown": [14, 14, 14, 14, 14],
+          "cooldownBurn": "14",
+          "cost": [90, 95, 100, 105, 110],
+          "costBurn": "90/95/100/105/110",
           "datavalues": {},
           "effect": [
             null,
-            [60, 85, 110, 135, 160],
-            [15, 20, 25, 30, 35],
-            [20, 20, 20, 20, 20],
-            [0.5, 0.5, 0.5, 0.5, 0.5],
-            [0.25, 0.25, 0.25, 0.25, 0.25],
-            [3, 3, 3, 3, 3],
             [0, 0, 0, 0, 0],
-            [1.25, 1.25, 1.25, 1.25, 1.25],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0]
           ],
           "effectBurn": [
             null,
-            "60/85/110/135/160",
-            "15/20/25/30/35",
-            "20",
-            "0.5",
-            "0.25",
-            "3",
             "0",
-            "1.25",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0"
           ],
           "vars": [],
           "costType": " {{ abilityresourcename }}",
           "maxammo": "-1",
-          "range": [1700, 1700, 1700, 1700, 1700],
-          "rangeBurn": "1700",
+          "range": [1075, 1075, 1075, 1075, 1075],
+          "rangeBurn": "1075",
           "image": {
             "full": "HowlingGale.png",
             "sprite": "spell5.png",
@@ -17275,35 +17290,37 @@
         {
           "id": "SowTheWind",
           "name": "Alizé",
-          "description": "Janna invoque un élémentaire d'air qui, passivement, augmente sa vitesse de déplacement et lui permet de traverser les unités. Elle peut aussi activer cette compétence pour infliger des dégâts et réduire la vitesse de déplacement d'un ennemi. La propriété passive est perdue pendant le délai de récupération de cette compétence.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> quand cette compétence est disponible, Janna gagne <speed>+{{ totalms }}% de vitesse de déplacement</speed> et est fantomatique.<br /><br /><spellActive>Active :</spellActive> l'élémentaire de Janna frappe un ennemi, le <status>ralentissant</status> de {{ totalslow }}% pendant {{ e4 }} sec et lui infligeant <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>.{{ spellmodifierdescriptionappend }}",
+          "description": "Janna invoque un élémentaire d'air qui, passivement, augmente sa vitesse de déplacement et lui permet de traverser les unités. Elle peut aussi activer cette compétence pour infliger des dégâts et réduire la vitesse de déplacement d'un ennemi.",
+          "tooltip": "<spellPassive>Passive :</spellPassive> Janna gagne <speed>+{{ totalms }} vitesse de déplacement</speed> et est fantomatique.<br /><br /><spellActive>Active :</spellActive> l'élémentaire de Janna frappe un ennemi, le <status>ralentissant</status> de {{ totalslow }} pendant {{ slowduration }} sec et lui infligeant <magicDamage>{{ totaldamage }} + {{ spell.tailwindself:bonusdamage }} pts de dégâts magiques</magicDamage>.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
-              "Vitesse de déplacement passive",
               "Dégâts",
               "Ralentissement",
-              "Coût en @AbilityResourceName@"
+              "Vitesse de déplacement passive",
+              "Coût en @AbilityResourceName@",
+              "Délai de récupération"
             ],
             "effect": [
-              "{{ mspercent*100.000000 }}% -> {{ mspercentnl*100.000000 }}%",
               "{{ basedamage }} -> {{ basedamageNL }}",
-              "{{ e3 }}% -> {{ e3NL }}%",
-              "{{ cost }} -> {{ costNL }}"
+              "{{ slowpercent }}% -> {{ slowpercentNL }}%",
+              "{{ mspercent*100.000000 }}% -> {{ mspercentnl*100.000000 }}%",
+              "{{ cost }} -> {{ costNL }}",
+              "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
           "maxrank": 5,
-          "cooldown": [12, 12, 12, 12, 12],
-          "cooldownBurn": "12",
-          "cost": [50, 60, 70, 80, 90],
-          "costBurn": "50/60/70/80/90",
+          "cooldown": [9, 8.5, 8, 7.5, 7],
+          "cooldownBurn": "9/8.5/8/7.5/7",
+          "cost": [50, 55, 60, 65, 70],
+          "costBurn": "50/55/60/65/70",
           "datavalues": {},
           "effect": [
             null,
             [0, 0, 0, 0, 0],
-            [70, 100, 130, 160, 190],
-            [20, 24, 28, 32, 36],
-            [3, 3, 3, 3, 3],
-            [0.0002, 0.0002, 0.0002, 0.0002, 0.0002],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -17313,9 +17330,9 @@
           "effectBurn": [
             null,
             "0",
-            "70/100/130/160/190",
-            "20/24/28/32/36",
-            "3",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -17326,8 +17343,8 @@
           "vars": [],
           "costType": " {{ abilityresourcename }}",
           "maxammo": "-1",
-          "range": [650, 650, 650, 650, 650],
-          "rangeBurn": "650",
+          "range": [615, 615, 615, 615, 615],
+          "rangeBurn": "615",
           "image": {
             "full": "SowTheWind.png",
             "sprite": "spell5.png",
@@ -17343,7 +17360,7 @@
           "id": "EyeOfTheStorm",
           "name": "Œil du cyclone",
           "description": "Janna invoque une tempête défensive qui protège un champion allié ou une tourelle alliée contre les dégâts et qui augmente ses dégâts d'attaque.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> Janna gagne +{{ empowerpercent*100 }}% d'efficacité des soins et boucliers pendant {{ empowerduration }} sec chaque fois qu'elle restreint les déplacements d'un champion ennemi.<br /><br /><spellActive>Active :</spellActive> Janna octroie à un champion allié ou à une tourelle alliée un <shield>bouclier de {{ totalshield }} PV</shield> qui se désagrège en {{ e3 }} sec. Tant qu'ils sont protégés par le bouclier, ils gagnent <scaleAD>+{{ totalad }} dégâts d'attaque</scaleAD>.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Janna octroie à un champion allié ou à une tourelle alliée un <shield>bouclier de {{ totalshield }} PV</shield> pendant {{ shieldduration }} sec. Tant que le bouclier est actif, l'entité protégée gagne +<scaleAD>{{ totalad }} dégâts d'attaque</scaleAD>.<br /><br />Janna récupère {{ ecdrefundforcc*100 }}% du délai de récupération à chaque fois qu'elle restreint les déplacements d'un champion ennemi avec une compétence active.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "PV du bouclier",
@@ -17352,25 +17369,25 @@
               "Délai de récupération"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
-              "{{ e2 }} -> {{ e2NL }}",
+              "{{ baseshield }} -> {{ baseshieldNL }}",
+              "{{ bonusad }} -> {{ bonusadNL }}",
               "{{ cost }} -> {{ costNL }}",
               "{{ cooldown }} -> {{ cooldownNL }}"
             ]
           },
           "maxrank": 5,
-          "cooldown": [15, 13.5, 12, 10.5, 9],
-          "cooldownBurn": "15/13.5/12/10.5/9",
-          "cost": [70, 80, 90, 100, 110],
-          "costBurn": "70/80/90/100/110",
+          "cooldown": [16, 15, 14, 13, 12],
+          "cooldownBurn": "16/15/14/13/12",
+          "cost": [70, 75, 80, 85, 90],
+          "costBurn": "70/75/80/85/90",
           "datavalues": {},
           "effect": [
             null,
-            [75, 100, 125, 150, 175],
-            [10, 15, 20, 25, 30],
-            [5, 5, 5, 5, 5],
-            [1.25, 1.25, 1.25, 1.25, 1.25],
-            [0.25, 0.25, 0.25, 0.25, 0.25],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -17379,11 +17396,11 @@
           ],
           "effectBurn": [
             null,
-            "75/100/125/150/175",
-            "10/15/20/25/30",
-            "5",
-            "1.25",
-            "0.25",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0",
             "0",
@@ -17469,7 +17486,7 @@
       ],
       "passive": {
         "name": "Zéphyr",
-        "description": "Janna gagne de la vitesse de déplacement bonus quand elle se dirige vers des champions alliés, et les champions alliés proches gagnent ce bonus quand ils se dirigent vers elle.",
+        "description": "Les alliés de Janna gagnent de la vitesse de déplacement quand ils se dirigent vers elle.<br><br>Les dégâts à l'impact de Janna et Alizé infligent des dégâts magiques supplémentaires équivalents à une partie de sa vitesse de déplacement bonus.",
         "image": {
           "full": "Janna_Tailwind.png",
           "sprite": "passive1.png",
@@ -18102,8 +18119,8 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [14, 12.5, 11, 9.5, 8],
-          "cooldownBurn": "14/12.5/11/9.5/8",
+          "cooldown": [15, 13.5, 12, 10.5, 9],
+          "cooldownBurn": "15/13.5/12/10.5/9",
           "cost": [50, 60, 70, 80, 90],
           "costBurn": "50/60/70/80/90",
           "datavalues": {},
@@ -18153,7 +18170,7 @@
           "id": "JaxR",
           "name": "Maître d'armes",
           "description": "Toutes les trois attaques consécutives, Jax inflige des dégâts magiques supplémentaires. De plus, Jax peut activer cette compétence pour infliger des dégâts autour de lui et renforcer sa détermination, ce qui augmente son armure et sa résistance magique pendant un court instant.",
-          "tooltip": "<spellPassive>Passive :</spellPassive> toutes les 3 attaques en moins de {{ passivefallofftime }} sec, Jax inflige <magicDamage>{{ onhitdamage }} pts de dégâts magiques</magicDamage> supplémentaires.<br /><br /><spellActive>Active :</spellActive> Jax donne un coup de lanterne qui inflige <magicDamage>{{ swingdamagetotal }} pts de dégâts magiques</magicDamage> aux ennemis proches. S'il touche un champion, il gagne <scaleArmor>+{{ basearmor }} armure</scaleArmor> et <scaleMR>+{{ basemr }} résistance magique</scaleMR> (plus <scaleArmor>+{{ bonusarmor }} armure</scaleArmor> et <scaleMR>+{{ bonusmr }} résistance magique</scaleMR> par champion touché supplémentaire) pendant {{ duration }} sec. Pendant cette même durée, Jax inflige des <magicDamage>dégâts magiques</magicDamage> supplémentaires toutes les 2 attaques, au lieu de toutes les 3 attaques.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "<spellPassive>Passive :</spellPassive> toutes les 3 attaques en moins de {{ passivefallofftime }} sec, Jax inflige <magicDamage>{{ onhitdamage }} pts de dégâts magiques</magicDamage> supplémentaires.<br /><br /><spellActive>Active :</spellActive> Jax frappe le sol avec sa lanterne, ce qui inflige <magicDamage>{{ swingdamagetotal }} pts de dégâts magiques</magicDamage> aux ennemis proches. S'il touche un champion, il gagne <scaleArmor>+{{ basearmor }} armure</scaleArmor> et <scaleMR>+{{ basemr }} résistance magique</scaleMR> (plus <scaleArmor>+{{ bonusarmor }} armure</scaleArmor> et <scaleMR>+{{ bonusmr }} résistance magique</scaleMR> par champion touché supplémentaire) pendant {{ duration }} sec. Pendant cette même durée, Jax inflige des <magicDamage>dégâts magiques</magicDamage> supplémentaires toutes les 2 attaques, au lieu de toutes les 3 attaques.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts passifs",
@@ -18177,8 +18194,8 @@
           "maxrank": 3,
           "cooldown": [100, 90, 80],
           "cooldownBurn": "100/90/80",
-          "cost": [50, 50, 50],
-          "costBurn": "50",
+          "cost": [100, 100, 100],
+          "costBurn": "100",
           "datavalues": {},
           "effect": [
             null,
@@ -19013,6 +19030,12 @@
           "num": 40,
           "name": "Jinx chat de combat prestige",
           "chromas": false
+        },
+        {
+          "id": "222051",
+          "num": 51,
+          "name": "Jinx Café Chouchous",
+          "chromas": true
         }
       ],
       "lore": "Criminelle hystérique et impulsive de Zaun, Jinx ne vit que pour semer le chaos sans se préoccuper des conséquences. Équipée d'un arsenal d'armes mortelles, elle déchaîne les explosions les plus spectaculaires en ne laissant dans son sillage que destruction et panique. Jinx déteste s'ennuyer et c'est dans la bonne humeur qu'elle sème le chaos dans tous les endroits qu'elle traverse.",
@@ -21473,7 +21496,7 @@
           "id": "KatarinaEWrapper",
           "name": "Shunpo",
           "description": "Katarina se téléporte près de sa cible. S'il s'agit d'un ennemi, elle le frappe. Sinon, elle frappe l'ennemi le plus proche.",
-          "tooltip": "Katarina se rue en un éclair sur l'allié, l'ennemi ou la <keywordMajor>dague</keywordMajor> ciblés. Si la cible est un ennemi, Katarina lui inflige <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. Sinon, elle frappe l'ennemi le plus proche à portée.<br /><br />Ramasser une <keywordMajor>dague</keywordMajor> réduira de <scaleLevel>{{ daggercooldownreduction }}</scaleLevel> sec (<scaleLevel>{{ tooltipdaggerreduction }}</scaleLevel>) le délai de récupération de cette compétence. Katarina peut se téléporter n'importe où près de la cible.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Katarina se téléporte en un éclair sur l'allié, l'ennemi ou la <keywordMajor>dague</keywordMajor> ciblés. Si la cible est un ennemi, Katarina lui inflige <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. Sinon, elle frappe l'ennemi le plus proche à portée.<br /><br />Ramasser une <keywordMajor>dague</keywordMajor> réduira de <scaleLevel>{{ daggercooldownreduction }}</scaleLevel> sec (<scaleLevel>{{ tooltipdaggerreduction }}</scaleLevel>) le délai de récupération de cette compétence. Katarina peut se téléporter n'importe où près de la cible.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts", "Délai de récupération"],
             "effect": [
@@ -22063,6 +22086,12 @@
           "id": "141015",
           "num": 15,
           "name": "Kayn lune de neige",
+          "chromas": true
+        },
+        {
+          "id": "141020",
+          "num": 20,
+          "name": "HEARTSTEEL Kayn",
           "chromas": true
         }
       ],
@@ -24167,6 +24196,12 @@
           "num": 2,
           "name": "K'Santé empyréen prestige",
           "chromas": false
+        },
+        {
+          "id": "897008",
+          "num": 8,
+          "name": "HEARTSTEEL K'Santé",
+          "chromas": true
         }
       ],
       "lore": "Rebelle et courageux, K'Santé combat les bêtes colossales et les Transfigurés impitoyables qui menacent son foyer convoité de Nazumah, une oasis lovée au cœur des sables de Shurima. Après s'être séparé de son ancien partenaire, K'Santé comprend que pour devenir un guerrier digne de diriger sa ville, il doit apprendre à brider son désir de victoire qui vire à l'obsession. Ce n'est qu'à ce prix qu'il pourra éviter les écueils de son propre orgueil et trouver en lui la sagesse nécessaire à la protection de son peuple.",
@@ -24211,7 +24246,7 @@
           "id": "KSanteQ",
           "name": "Coups de ntofo",
           "description": "K'Santé frappe devant lui, blessant et ralentissant tous les ennemis sur une courte ligne.<br><br>À l'impact, cela lui octroie un effet pendant quelques secondes. À 2 effets cumulés, cette compétence tire une onde de choc qui attire les ennemis.",
-          "tooltip": "K'Santé assène un puissant coup avec son arme, infligeant <physicalDamage>{{ basedamage }} pts de dégâts physiques</physicalDamage> et <status>ralentissant</status> les ennemis touchés de {{ slowpercent*100 }}% pendant un court instant.<br /><br />Quand un ennemi est touché, K'Santé gagne un effet de Coups de ntofo pendant {{ recastwindow }} sec. À 2 effets cumulés, K'Santé tire à la place une onde de choc qui <status>étourdit</status> et <status>attire</status> les ennemis pendant {{ stunduration }} sec.<br /><br /><keywordMajor>Grand jeu</keywordMajor> : le délai de récupération de cette compétence est réduit de 25% et son délai d'incantation est réduit de {{ alloutqcasttimereduce }} sec.<br />{{ spellmodifierdescriptionappend }}",
+          "tooltip": "K'Santé assène un puissant coup avec son arme, infligeant <physicalDamage>{{ basedamage }} pts de dégâts physiques</physicalDamage> et <status>ralentissant</status> les ennemis touchés de {{ slowpercent*100 }}% pendant un court instant.<br /><br />Quand un ennemi est touché, K'Santé gagne un effet de Coups de ntofo pendant {{ recastwindow }} sec. À 2 effets cumulés, K'Santé tire à la place une onde de choc qui <status>étourdit</status> et <status>attire</status> les ennemis pendant {{ stunduration }} sec.<br /><br /><rules>L'<scaleArmor>armure</scaleArmor> et la <scaleMR>résistance magique</scaleMR> bonus réduisent le délai de récupération : {{ bonusresiststooltip }} / {{ defensecapforcooldown }}.<br />Les <healing>PV</healing> bonus réduisent le délai d'incantation : {{ bonushealthtooltip }} / {{ healthcapforcasttime }}.</rules><br /><br /><keywordMajor>Grand jeu</keywordMajor> : le délai de récupération et le délai d'incantation de cette compétence sont encore plus réduits.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Dégâts"],
             "effect": ["{{ flatdamage }} -> {{ flatdamageNL }}"]
@@ -24268,7 +24303,7 @@
           "id": "KSanteW",
           "name": "Pour Nazumah !",
           "description": "K'Santé charge son attaque avant d'effectuer une ruée. K'Santé est impossible à arrêter et subit moins de dégâts pendant sa charge. Les cibles touchées par la ruée sont repoussées jusqu'au bout de sa portée et sont étourdies.<br><br>",
-          "tooltip": "K'Santé lève ses armes en position défensive pendant {{ mindurationtooltip }} - {{ maxduration }} sec, devenant impossible à arrêter et réduisant de {{ damagereductioncharlevel }}% les dégâts qu'il subit.<br /><br />Après la canalisation, il fonce droit devant, infligeant <physicalDamage>{{ basedamagecalc }} + {{ maxhealthdamage*100 }}% des PV max en dégâts physiques</physicalDamage>. K'Santé <status>repousse</status> et <status>étourdit</status> pendant {{ maxknockbackduration }} sec les ennemis dans lesquels il fonce.<br /><br /><keywordMajor>Grand jeu :</keywordMajor> le délai de récupération de cette compétence est réinitialisé. Cette compétence ne <status>repousse</status> plus, n'<status>étourdit</status> plus et charge seulement pendant {{ aomindurationtooltip }} sec. La réduction des dégâts par cette compétence augmente à {{ damagereductioncalcao }}%, sa vitesse de ruée augmente et son délai de récupération diminue.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "K'Santé lève ses armes en position défensive pendant {{ mindurationtooltip }} - {{ maxduration }} sec, devenant impossible à arrêter et réduisant de {{ damagereductioncharlevel }}% les dégâts qu'il subit.<br /><br />Après la canalisation, il fonce droit devant, infligeant <physicalDamage>{{ basedamagecalc }} + {{ maxhealthdamage*100 }}% des PV max en dégâts physiques</physicalDamage>. K'Santé <status>repousse</status> et <status>étourdit</status> pendant {{ maxknockbackduration }} sec les ennemis dans lesquels il fonce.<br /><br /><keywordMajor>Grand jeu :</keywordMajor> le délai de récupération de cette compétence est réinitialisé. La réduction des dégâts augmente à {{ damagereductioncalcao }}%, la compétence charge seulement pendant {{ aomindurationtooltip }} sec, sa vitesse de ruée augmente et son délai de récupération diminue. Cette compétence ne <status>repousse</status> plus et n'<status>étourdit</status> plus.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Dégâts de base",
@@ -24582,8 +24617,8 @@
         "critperlevel": 0,
         "attackdamage": 55,
         "attackdamageperlevel": 2.7,
-        "attackspeedperlevel": 2.2,
-        "attackspeed": 0.625
+        "attackspeedperlevel": 1.5,
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -26062,7 +26097,7 @@
         "critperlevel": 0,
         "attackdamage": 55,
         "attackdamageperlevel": 2.7,
-        "attackspeedperlevel": 1.36,
+        "attackspeedperlevel": 1.5,
         "attackspeed": 0.656
       },
       "spells": [
@@ -26801,6 +26836,12 @@
           "id": "117037",
           "num": 37,
           "name": "Lulu dresseuse de monstres",
+          "chromas": true
+        },
+        {
+          "id": "117046",
+          "num": 46,
+          "name": "Lulu Café Chouchous",
           "chromas": true
         }
       ],
@@ -28931,8 +28972,8 @@
             "effect": ["{{ basedamage }} -> {{ basedamageNL }}"]
           },
           "maxrank": 5,
-          "cooldown": [18, 18, 18, 18, 18],
-          "cooldownBurn": "18",
+          "cooldown": [14, 14, 14, 14, 14],
+          "cooldownBurn": "14",
           "cost": [0, 0, 0, 0, 0],
           "costBurn": "0",
           "datavalues": {},
@@ -29375,7 +29416,7 @@
         "name": "Tout feu tout flamme",
         "description": "Les compétences de Milio enchantent les alliés touchés, ce qui permet aux prochains dégâts de ces alliés d'infliger des dégâts supplémentaires et de brûler leur cible.",
         "image": {
-          "full": "Milio_P.Milio.png",
+          "full": "Milio_P.png",
           "sprite": "passive2.png",
           "group": "passive",
           "x": 384,
@@ -35798,7 +35839,13 @@
           "name": "Poppy astronaute",
           "chromas": true
         },
-        { "id": "78024", "num": 24, "name": "Poppy sorcière", "chromas": true }
+        { "id": "78024", "num": 24, "name": "Poppy sorcière", "chromas": true },
+        {
+          "id": "78033",
+          "num": 33,
+          "name": "Poppy Café Chouchous",
+          "chromas": true
+        }
       ],
       "lore": "Runeterra ne manque pas de braves champions, mais peu peuvent se targuer d'être aussi tenaces que Poppy. Armée du légendaire marteau d'Orlon, faisant deux fois sa taille, cette yordle déterminée cherche depuis d'innombrables années le « héros de Demacia », qui serait le dépositaire légitime de cette arme. En attendant, elle part inlassablement au combat, repoussant les ennemis du royaume à grands coups de marteau.",
       "blurb": "Runeterra ne manque pas de braves champions, mais peu peuvent se targuer d'être aussi tenaces que Poppy. Armée du légendaire marteau d'Orlon, faisant deux fois sa taille, cette yordle déterminée cherche depuis d'innombrables années le « héros de...",
@@ -37698,7 +37745,7 @@
           "id": "DefensiveBallCurl",
           "name": "Boule défensive",
           "description": "Rammus prend une posture défensive. Son armure et sa résistance magique sont grandement augmentées, les dégâts de Carapace cloutée sont augmentés et Rammus renvoie des dégâts aux ennemis qui lui lancent des attaques de base.",
-          "tooltip": "Rammus prend une posture défensive, gagnant <scaleArmor>+{{ F1 }}</scaleArmor> <scaleArmor>armure</scaleArmor> (%i:scaleArmor%) et <scaleMR>+{{ F2 }}</scaleMR> <scaleMR>résistance magique</scaleMR> (%i:scaleMR%). Pendant cette durée, <spellName>Carapace cloutée</spellName> inflige {{ passivedamageampcalc }} de dégâts supplémentaires et blesse aussi les ennemis qui attaquent Rammus.<br /><br />Les attaques de Rammus augmentent la durée de {{ bonusdurationperauto }} sec (max : {{ maxbonusduration }}).<br /><br /><recast>Réactivation</recast> : Rammus met fin prématurément à cette compétence.<br />{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Rammus prend une posture défensive pendant {{ buffduration }} sec, gagnant <scaleArmor>+{{ F1 }} armure (%i:scaleArmor%)</scaleArmor> et <scaleMR>+{{ F2 }} résistance magique (%i:scaleMR%)</scaleMR>. Pendant cette durée, <spellName>Carapace cloutée</spellName> inflige {{ passivedamageampcalc }} de dégâts supplémentaires et blesse aussi les ennemis qui attaquent Rammus.<br /><br />Les attaques de Rammus augmentent la durée de {{ bonusdurationperauto }} sec (max : {{ maxbonusduration }}).<br /><br /><recast>Réactivation</recast> : Rammus met fin prématurément à cette compétence.<br />{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Bonus en armure", "Bonus en résistance magique"],
             "effect": [
@@ -39700,7 +39747,7 @@
         {
           "id": "92007",
           "num": 7,
-          "name": "Riven du Mondial 2016",
+          "name": "Riven du Mondial 2012 ravivée",
           "chromas": true
         },
         {
@@ -40097,6 +40144,12 @@
           "id": "68013",
           "num": 13,
           "name": "Rumble astro-groove",
+          "chromas": true
+        },
+        {
+          "id": "68023",
+          "num": 23,
+          "name": "Rumble Café Chouchous",
           "chromas": true
         }
       ],
@@ -40506,7 +40559,7 @@
         "attackdamage": 58,
         "attackdamageperlevel": 3,
         "attackspeedperlevel": 2.11,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -41934,24 +41987,24 @@
       "info": { "attack": 0, "defense": 0, "magic": 0, "difficulty": 0 },
       "stats": {
         "hp": 570,
-        "hpperlevel": 104,
-        "mp": 440,
-        "mpperlevel": 40,
+        "hpperlevel": 90,
+        "mp": 360,
+        "mpperlevel": 50,
         "movespeed": 325,
-        "armor": 19,
+        "armor": 26,
         "armorperlevel": 4.2,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 525,
         "hpregen": 6.5,
         "hpregenperlevel": 0.6,
-        "mpregen": 8,
-        "mpregenperlevel": 1,
+        "mpregen": 11.5,
+        "mpregenperlevel": 0.4,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 55,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 1,
+        "attackspeedperlevel": 2,
         "attackspeed": 0.669
       },
       "spells": [
@@ -41964,14 +42017,12 @@
             "label": [
               "Délai de récupération",
               "Coût en @AbilityResourceName@",
-              "Dégâts initiaux",
-              "Ratio de puissance total"
+              "Dégâts initiaux"
             ],
             "effect": [
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ cost }} -> {{ costNL }}",
-              "{{ basedamage }} -> {{ basedamageNL }}",
-              "{{ apratio*100.000000 }}% -> {{ aprationl*100.000000 }}%"
+              "{{ basedamage }} -> {{ basedamageNL }}"
             ]
           },
           "maxrank": 5,
@@ -42042,10 +42093,10 @@
             ]
           },
           "maxrank": 5,
-          "cooldown": [28, 26, 24, 22, 20],
-          "cooldownBurn": "28/26/24/22/20",
-          "cost": [50, 60, 70, 80, 90],
-          "costBurn": "50/60/70/80/90",
+          "cooldown": [28, 25, 22, 19, 16],
+          "cooldownBurn": "28/25/22/19/16",
+          "cost": [80, 85, 90, 95, 100],
+          "costBurn": "80/85/90/95/100",
           "datavalues": {},
           "effect": [
             null,
@@ -42104,8 +42155,8 @@
           "maxrank": 5,
           "cooldown": [10, 10, 10, 10, 10],
           "cooldownBurn": "10",
-          "cost": [60, 70, 80, 90, 100],
-          "costBurn": "60/70/80/90/100",
+          "cost": [60, 65, 70, 75, 80],
+          "costBurn": "60/65/70/75/80",
           "datavalues": {},
           "effect": [
             null,
@@ -42286,6 +42337,12 @@
           "id": "875045",
           "num": 45,
           "name": "Sett combattant spirituel",
+          "chromas": true
+        },
+        {
+          "id": "875056",
+          "num": 56,
+          "name": "HEARTSTEEL Sett",
           "chromas": true
         }
       ],
@@ -43789,7 +43846,7 @@
         "attackdamage": 63,
         "attackdamageperlevel": 3.4,
         "attackspeedperlevel": 1.9,
-        "attackspeed": 0.613
+        "attackspeed": 0.625
       },
       "spells": [
         {
@@ -46821,7 +46878,7 @@
         "attackdamage": 54,
         "attackdamageperlevel": 2.9,
         "attackspeedperlevel": 2,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -47252,13 +47309,15 @@
               "Délai de récupération",
               "Dégâts",
               "Portée",
-              "Coût en @AbilityResourceName@"
+              "Coût en @AbilityResourceName@",
+              "Réduction du délai de récupération"
             ],
             "effect": [
               "{{ cooldown }} -> {{ cooldownNL }}",
               "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ castrange }} -> {{ castrangeNL }}",
-              "{{ cost }} -> {{ costNL }}"
+              "{{ cost }} -> {{ costNL }}",
+              "{{ champrefund*100.000000 }}% -> {{ champrefundnl*100.000000 }}%"
             ]
           },
           "maxrank": 5,
@@ -47525,7 +47584,7 @@
         "attackdamage": 58,
         "attackdamageperlevel": 3.3,
         "attackspeedperlevel": 1.36,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -52177,7 +52236,7 @@
           "effect": [
             null,
             [60, 100, 140, 180, 220],
-            [25, 30, 35, 40, 45],
+            [30, 35, 40, 45, 50],
             [4, 4, 4, 4, 4],
             [0, 0, 0, 0, 0],
             [300, 300, 300, 300, 300],
@@ -52190,7 +52249,7 @@
           "effectBurn": [
             null,
             "60/100/140/180/220",
-            "25/30/35/40/45",
+            "30/35/40/45/50",
             "4",
             "0",
             "300",
@@ -53172,8 +53231,8 @@
         "critperlevel": 0,
         "attackdamage": 55,
         "attackdamageperlevel": 3.1416,
-        "attackspeedperlevel": 1.36,
-        "attackspeed": 0.625
+        "attackspeedperlevel": 1.59,
+        "attackspeed": 0.643
       },
       "spells": [
         {
@@ -56420,7 +56479,7 @@
         "attackdamage": 55,
         "attackdamageperlevel": 3,
         "attackspeedperlevel": 1.36,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -56435,7 +56494,7 @@
               "Coût en @AbilityResourceName@"
             ],
             "effect": [
-              "{{ e1 }} -> {{ e1NL }}",
+              "{{ basedamage }} -> {{ basedamageNL }}",
               "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}",
               "{{ cost }} -> {{ costNL }}"
             ]
@@ -57522,6 +57581,18 @@
           "num": 35,
           "name": "Yone guerrier d'encre",
           "chromas": true
+        },
+        {
+          "id": "777045",
+          "num": 45,
+          "name": "HEARTSTEEL Yone",
+          "chromas": true
+        },
+        {
+          "id": "777046",
+          "num": 46,
+          "name": "HEARTSTEEL Yone prestige",
+          "chromas": false
         }
       ],
       "lore": "Au cours de sa vie, Yone fut le demi-frère de Yasuo et un disciple renommé de l'école d'armes de son village. Mais après avoir été tué par son propre frère, il se retrouva hanté par une entité malveillante dans le royaume spirituel. Il dut la tuer avec sa propre épée. Désormais maudit et forcé de porter le masque de l'azakana, Yone chasse inlassablement ces créatures démoniaques afin de comprendre ce qu'il est devenu.",
@@ -59644,7 +59715,7 @@
         "mp": 480,
         "mpperlevel": 23.5,
         "movespeed": 325,
-        "armor": 22,
+        "armor": 18,
         "armorperlevel": 4.5,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
@@ -60025,7 +60096,7 @@
         "attackdamage": 52,
         "attackdamageperlevel": 3,
         "attackspeedperlevel": 2.13,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -60374,7 +60445,7 @@
         "attackdamage": 58,
         "attackdamageperlevel": 3.3,
         "attackspeedperlevel": 2.5,
-        "attackspeed": 0.625
+        "attackspeed": 0.658
       },
       "spells": [
         {
@@ -60749,14 +60820,14 @@
         "attackdamage": 53,
         "attackdamageperlevel": 3.2,
         "attackspeedperlevel": 2.11,
-        "attackspeed": 0.625
+        "attackspeed": 0.681
       },
       "spells": [
         {
           "id": "ZyraQ",
           "name": "Épines funestes",
           "description": "Des ronces se répandent dans le sol et provoquent une explosion d'épines, infligeant des dégâts magiques aux ennemis dans la zone. Si le sort est lancé près d'une graine, Épines funestes fait pousser une Cracheuse de ronces qui tire sur les ennemis de loin.",
-          "tooltip": "Zyra répand des ronces dans le sol et provoque une explosion d'épines, infligeant <magicDamage>{{ initialdamage }} pts de dégâts magiques</magicDamage>.<br /><br />Si cette compétence est lancée près d'une <keywordMajor>graine</keywordMajor>, cette <keywordMajor>graine</keywordMajor> se transforme en Cracheuse de ronces qui inflige <magicDamage>{{ spell.zyrap:plantdamage }} pts de dégâts magiques</magicDamage> et dure {{ f2 }} sec. Les Cracheuses de ronces ont une portée de 575 unités de distance.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Zyra répand des ronces dans le sol et provoque une explosion d'épines, infligeant <magicDamage>{{ initialdamage }} pts de dégâts magiques</magicDamage>.<br /><br />Si cette compétence est lancée près d'une <keywordMajor>graine</keywordMajor>, cette <keywordMajor>graine</keywordMajor> se transforme en Cracheuse de ronces qui inflige <magicDamage>{{ spell.zyrap:plantdamage }} pts de dégâts magiques</magicDamage> et dure {{ spell.zyrap:plantduration }} sec. Les Cracheuses de ronces ont une portée de 575 unités de distance.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": ["Délai de récupération", "Dégâts"],
             "effect": [
@@ -60772,7 +60843,7 @@
           "datavalues": {},
           "effect": [
             null,
-            [60, 95, 130, 165, 200],
+            [60, 100, 140, 180, 220],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -60785,7 +60856,7 @@
           ],
           "effectBurn": [
             null,
-            "60/95/130/165/200",
+            "60/100/140/180/220",
             "0",
             "0",
             "0",
@@ -60873,17 +60944,17 @@
           "id": "ZyraE",
           "name": "Racines fixatrices",
           "description": "Zyra lance des racines à travers le sol pour capturer sa cible, infligeant des dégâts et immobilisant les ennemis qu'elles touchent. Si le sort est lancé près d'une graine, Racines fixatrices fait pousser une Plante flagellante dont les attaques à courte portée réduisent la vitesse de déplacement des ennemis.",
-          "tooltip": "Zyra lance des racines qui <status>immobilisent</status> les ennemis pendant {{ e5 }} sec et leur infligent <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. <br /><br />Si cette compétence passe près d'une <keywordMajor>graine</keywordMajor>, cette <keywordMajor>graine</keywordMajor> se transforme en Plante flagellante qui inflige <magicDamage>{{ spell.zyrap:plantdamage }} pts de dégâts magiques</magicDamage> et dure {{ f2 }} sec. Les Plantes flagellantes ont une portée de 400 unités de distance et leurs attaques <status>ralentissent</status> les ennemis de {{ e2 }}% pendant {{ e3 }} sec. Les <status>ralentissements</status> de multiples Plantes flagellantes se cumulent jusqu'à {{ maxslowstacks }} fois.{{ spellmodifierdescriptionappend }}",
+          "tooltip": "Zyra lance des racines qui <status>immobilisent</status> les ennemis pendant {{ e5 }} sec et leur infligent <magicDamage>{{ totaldamage }} pts de dégâts magiques</magicDamage>. <br /><br />Si cette compétence passe près d'une <keywordMajor>graine</keywordMajor>, cette <keywordMajor>graine</keywordMajor> se transforme en Plante flagellante qui inflige <magicDamage>{{ spell.zyrap:plantdamage }} pts de dégâts magiques</magicDamage> et dure {{ spell.zyrap:plantduration }} sec. Les Plantes flagellantes ont une portée de 400 unités de distance et leurs attaques <status>ralentissent</status> les ennemis de {{ e2 }}% pendant {{ e3 }} sec. Les <status>ralentissements</status> de multiples Plantes flagellantes se cumulent jusqu'à {{ maxslowstacks }} fois.{{ spellmodifierdescriptionappend }}",
           "leveltip": {
             "label": [
               "Coût en @AbilityResourceName@",
-              "Durée de l'immobilisation",
-              "Dégâts"
+              "Dégâts",
+              "Durée de l'immobilisation"
             ],
             "effect": [
               "{{ cost }} -> {{ costNL }}",
-              "{{ e5 }} -> {{ e5NL }}",
-              "{{ e1 }} -> {{ e1NL }}"
+              "{{ basedamage }} -> {{ basedamageNL }}",
+              "{{ rootduration }} -> {{ rootdurationNL }}"
             ]
           },
           "maxrank": 5,
@@ -60894,7 +60965,7 @@
           "datavalues": {},
           "effect": [
             null,
-            [60, 105, 150, 195, 240],
+            [60, 95, 130, 165, 200],
             [30, 30, 30, 30, 30],
             [2, 2, 2, 2, 2],
             [4, 4, 4, 0, 0],
@@ -60907,7 +60978,7 @@
           ],
           "effectBurn": [
             null,
-            "60/105/150/195/240",
+            "60/95/130/165/200",
             "30",
             "2",
             "4/4/4/0/0",

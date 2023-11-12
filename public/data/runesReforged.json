@@ -13,7 +13,7 @@
             "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png",
             "name": "Électrocution",
             "shortDesc": "Toucher un champion avec 3 attaques ou compétences <b>différentes</b> en moins de 3 sec inflige des <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>dégâts adaptatifs</lol-uikit-tooltipped-keyword> supplémentaires.",
-            "longDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 3 sec inflige des <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dégâts adaptatifs</font></lol-uikit-tooltipped-keyword> supplémentaires.<br><br>Dégâts : 30 - 220 (+0.1 dégâts d'attaque supplémentaires, +0.05 puissance) pts de dégâts.<br><br>Délai de récupération : 25 - 20 sec.<br><br><hr><i>''On les appelait les lords fulminants, car parler de leurs éclairs était une invitation à l'anéantissement.''</i>"
+            "longDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 3 sec inflige des <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dégâts adaptatifs</font></lol-uikit-tooltipped-keyword> supplémentaires.<br><br>Dégâts : 30 - 220 (+0.1 dégâts d'attaque supplémentaires, +0.05 puissance) pts de dégâts.<br><br>Délai de récupération : 25 - 20 sec.<br><br><hr><i>« On les appelait les lords fulminants, car parler de leurs éclairs était une invitation à l'anéantissement. »</i>"
           },
           {
             "id": 8124,
@@ -92,7 +92,7 @@
             "key": "EyeballCollection",
             "icon": "perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png",
             "name": "Arracheur d'œil",
-            "shortDesc": "Vous collectez des yeux en participant à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> des champions. Vous gagnez définitivement des dégâts d'attaque ou de la puissance (<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>bonus adaptatif</lol-uikit-tooltipped-keyword>) pour chaque œil, plus un bonus une fois votre collection terminée.",
+            "shortDesc": "Vous collectez des yeux en participant à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> des champions. Vous gagnez définitivement des dégâts d'attaque ou de la puissance (<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>bonus adaptatif</lol-uikit-tooltipped-keyword>) pour chaque œil, plus un bonus une fois votre collection terminée.",
             "longDesc": "Vous collectez des yeux en participant à l'élimination des champions. Vous gagnez un bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptatif</font></lol-uikit-tooltipped-keyword> de 1.2 dégâts d'attaque ou 2 puissance par œil collecté. <br><br>Une fois votre collecte terminée (10 yeux), vous gagnez un bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptatif</font></lol-uikit-tooltipped-keyword> de 6 dégâts d'attaque ou 10 puissance.<br><br>Vous collectez 1 œil par champion éliminé."
           }
         ]
@@ -104,7 +104,7 @@
             "key": "TreasureHunter",
             "icon": "perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
             "name": "Chasseur de trésors",
-            "shortDesc": "Participer à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> vous octroie des PO supplémentaires (une fois par champion). ",
+            "shortDesc": "Participer à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> vous octroie des PO supplémentaires (une fois par champion). ",
             "longDesc": "Vous gagnerez <gold>50 PO</gold> supplémentaires la prochaine fois que vous cumulerez un effet <i>Chasseur de primes</i>. Vous gagnez <gold>20 PO</gold> supplémentaires à chaque effet <i>Chasseur de primes</i> cumulé, jusqu'à <gold>130 PO</gold>.<br><br>Vous gagnez un effet <i>Chasseur de primes</i> la première fois que vous participez à l'élimination de chaque champion ennemi."
           },
           {
@@ -112,7 +112,7 @@
             "key": "IngeniousHunter",
             "icon": "perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png",
             "name": "Chasseur ingénieux",
-            "shortDesc": "Participer à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> octroie un bonus permanent en <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>accélération</lol-uikit-tooltipped-keyword> d'objet (reliques incluses).",
+            "shortDesc": "Participer à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> octroie un bonus permanent en <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>accélération</lol-uikit-tooltipped-keyword> d'objet (reliques incluses).",
             "longDesc": "Vous gagnez +<attention>20</attention> <b>accélération d'objet</b> et +<attention>6</attention> <b>accélération d'objet</b> par effet <i>Chasseur de primes</i> cumulé (affecte aussi les reliques).<br><br>Vous gagnez un effet <i>Chasseur de primes</i> la première fois que vous participez à l'élimination de chaque champion ennemi.<br><br><rules>L'accélération d'objet affecte tous les objets qui ont des délais de récupération. </rules>"
           },
           {
@@ -120,7 +120,7 @@
             "key": "RelentlessHunter",
             "icon": "perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png",
             "name": "Chasseur acharné",
-            "shortDesc": "Participer à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> augmente définitivement votre <b><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>vitesse de déplacement</lol-uikit-tooltipped-keyword> en dehors des combats</b>. ",
+            "shortDesc": "Participer à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> augmente définitivement votre <b><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>vitesse de déplacement</lol-uikit-tooltipped-keyword> en dehors des combats</b>. ",
             "longDesc": "Vous gagnez <speed>+5 vitesse de déplacement</speed> en dehors des combats plus <speed>8</speed> par effet <i>Chasseur de primes</i> cumulé.<br><br>Vous gagnez un effet <i>Chasseur de primes</i> la première fois que vous participez à l'élimination de chaque champion ennemi."
           },
           {
@@ -128,7 +128,7 @@
             "key": "UltimateHunter",
             "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
             "name": "Chasseur ultime",
-            "shortDesc": "Participer à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> réduit définitivement le délai de récupération de votre ultime. ",
+            "shortDesc": "Participer à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> d'un champion <b>unique</b> réduit définitivement le délai de récupération de votre ultime. ",
             "longDesc": "Votre ultime gagne +<attention>6</attention> accélération de compétence et +<attention>5</attention> accélération de compétence par effet <i>Chasseur de primes</i> cumulé.<br><br>Vous gagnez un effet <i>Chasseur de primes</i> la première fois que vous participez à l'élimination de chaque champion ennemi."
           }
         ]
@@ -164,8 +164,8 @@
             "key": "FirstStrike",
             "icon": "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
             "name": "Premier coup",
-            "shortDesc": "Quand vous commencez un combat contre un champion, vous infligez 8% de dégâts supplémentaires pendant 3 sec et gagnez des PO selon les dégâts que vous infligez.",
-            "longDesc": "Vos attaques ou compétences contre un champion ennemi dans les 0.25 sec après le début du combat vous octroient 5 PO et <b>Premier coup</b> pendant 3 sec, ce qui vous permet d'infliger <truedamage>8%</truedamage> de <truedamage>dégâts</truedamage> supplémentaires aux champions et de gagner des <gold>PO</gold> équivalentes à <gold>100% (70% pour les champions à distance)</gold> des dégâts supplémentaires infligés.<br><br>Délai de récupération : <scaleLevel>25-15</scaleLevel> sec."
+            "shortDesc": "Quand vous commencez un combat contre un champion, vous infligez 7% de dégâts supplémentaires pendant 3 sec et gagnez des PO selon les dégâts que vous infligez.",
+            "longDesc": "Vos attaques ou compétences contre un champion ennemi dans les 0.25 sec après le début du combat vous octroient 5 PO et <b>Premier coup</b> pendant 3 sec, ce qui vous permet d'infliger <truedamage>7%</truedamage> de <truedamage>dégâts</truedamage> supplémentaires aux champions et de gagner des <gold>PO</gold> équivalentes à <gold>100% (70% pour les champions à distance)</gold> des dégâts supplémentaires infligés.<br><br>Délai de récupération : <scaleLevel>25-15</scaleLevel> sec."
           }
         ]
       },
@@ -184,7 +184,7 @@
             "key": "MagicalFootwear",
             "icon": "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
             "name": "Chaussures magiques",
-            "shortDesc": "Vous obtenez des bottes gratuites après 12 min de jeu, mais vous ne pouvez pas acheter de bottes avant cela. Chaque fois que vous participez à l'<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>élimination</lol-uikit-tooltipped-keyword> d'un champion, vous recevez vos bottes 45 sec plus tôt.",
+            "shortDesc": "Vous obtenez des bottes gratuites après 12 min de jeu, mais vous ne pouvez pas acheter de bottes avant cela. Chaque fois que vous participez à <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>l'élimination</lol-uikit-tooltipped-keyword> d'un champion, vous recevez vos bottes 45 sec plus tôt.",
             "longDesc": "Vous obtenez des Chaussures légèrement magiques après 12 minutes de jeu, mais vous ne pouvez pas acheter de bottes avant cela. Chaque fois que vous participez à l'élimination d'un champion, vous obtenez les bottes 45 sec plus tôt.<br><br>Les Chaussures légèrement magiques vous octroient <speed>+10 vitesse de déplacement</speed>."
           },
           {
@@ -533,7 +533,7 @@
             "icon": "perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
             "name": "Rush phasique",
             "shortDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> vous octroie un bonus en <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>vitesse de déplacement</lol-uikit-tooltipped-keyword>. ",
-            "longDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 4 sec octroie <speed>+15% - +40% de vitesse de déplacement</speed> (selon le niveau) et +75% de résistance aux ralentissements. <hr>Pour les champions de mêlée, ce bonus augmente à <speed>+30% - +60% de vitesse de déplacement</speed>.<hr>Durée : 3 sec.<br>Délai de récupération : 30 sec - 10 sec."
+            "longDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 4 sec octroie <speed>+15% - +40% de vitesse de déplacement</speed> (selon le niveau) et +75% de résistance aux ralentissements. <hr>Pour les champions de mêlée, ce bonus augmente à <speed>+25% - +50% de vitesse de déplacement</speed>.<hr>Durée : 3 sec.<br>Délai de récupération : 30 sec - 10 sec."
           }
         ]
       },
