@@ -35,6 +35,11 @@ class Item
     private $name;
 
     /**
+     * @MongoDB\Field(type="bool")
+     */
+    private $inStore;
+
+    /**
      * @MongoDB\Field(type="string")
      */
     private $description;
@@ -76,6 +81,17 @@ class Item
     public function setName(string $name): self
     {
         $this->name = $name;
+        return $this;
+    }
+
+    public function getInStore(): ?bool
+    {
+        return $this->inStore;
+    }
+
+    public function setInStore(bool $inStore): self
+    {
+        $this->inStore = $inStore;
         return $this;
     }
 

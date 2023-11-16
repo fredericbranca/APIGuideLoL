@@ -141,6 +141,11 @@ class DataImportController extends AbstractController
             $item = new Item();
             $item->setId($id);
             $item->setName($itemData['name']);
+            if (isset($itemData['inStore'])) {
+                $item->setInStore($itemData['inStore']);
+            } else {
+                $item->setInStore(true);
+            }
             $item->setDescription($itemData['description']);
             $item->setImage($itemData['image']['full']);
             $item->setGold($itemData['gold']);
