@@ -138,20 +138,22 @@ class DataImportController extends AbstractController
         $data = json_decode($json, true)['data'];
 
         foreach ($data as $id => $itemData) {
-            $item = new Item();
-            $item->setId($id);
-            $item->setName($itemData['name']);
-            if (isset($itemData['inStore'])) {
-                $item->setInStore($itemData['inStore']);
-            } else {
-                $item->setInStore(true);
-            }
-            $item->setDescription($itemData['description']);
-            $item->setImage($itemData['image']['full']);
-            $item->setGold($itemData['gold']);
-            $item->setTags($itemData['tags']);
+            if ($id < 200000 && $id != 3600 && $id != 4403) {
+                $item = new Item();
+                $item->setId($id);
+                $item->setName($itemData['name']);
+                if (isset($itemData['inStore'])) {
+                    $item->setInStore($itemData['inStore']);
+                } else {
+                    $item->setInStore(true);
+                }
+                $item->setDescription($itemData['description']);
+                $item->setImage($itemData['image']['full']);
+                $item->setGold($itemData['gold']);
+                $item->setTags($itemData['tags']);
 
-            $dm->persist($item);
+                $dm->persist($item);
+            }
         }
 
         $dm->flush();
